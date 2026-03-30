@@ -1,0 +1,133 @@
+/* ══════════════════════════════════════════
+   BLOG POST PAGE
+   ══════════════════════════════════════════ */
+.blog-post {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 8rem 2rem 5rem;
+}
+
+.blog-post-header {
+    margin-bottom: 3rem;
+}
+
+.blog-post-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.blog-post-meta .blog-read-time {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+}
+
+.blog-post-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    color: var(--starlight);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+.blog-post-author {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* Body content */
+.blog-post-body {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.blog-post-body p {
+    margin-bottom: 1.5rem;
+}
+
+.blog-post-body strong {
+    color: var(--starlight);
+}
+
+.blog-post-body em {
+    color: var(--text-primary);
+    font-style: italic;
+}
+
+.blog-post-body h2 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--starlight);
+    margin: 2.5rem 0 1rem;
+}
+
+.blog-post-body hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+    margin: 2.5rem 0;
+}
+
+.blog-post-body ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.blog-post-body li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.blog-post-body li strong {
+    color: var(--starlight);
+}
+
+.blog-post-body blockquote {
+    border-left: 3px solid var(--stellar-cyan);
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    background: rgba(37, 99, 235, 0.08);
+    border-radius: 0 12px 12px 0;
+}
+
+.blog-post-body blockquote p {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    color: var(--starlight);
+}
+
+/* Images */
+.blog-image {
+    margin: 2rem 0;
+}
+
+.blog-image img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+}
+
+.blog-image figcaption {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    text-align: center;
+    margin-top: 0.6rem;
+    letter-spacing: 0.03em;
+}
+
+/* Footer */
+.blog-post-footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--glass-border);
+}
