@@ -10,6 +10,7 @@ const sectionOrder = [
     'research',
     'experience',
     'education',
+    'publications',
     'awards',
     'projects',
     'blog',

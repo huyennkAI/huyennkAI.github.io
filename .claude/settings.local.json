@@ -8,7 +8,9 @@
       "Bash(git commit:*)",
       "Bash(git remote:*)",
       "Bash(git push:*)",
-      "Bash(node build.js)"
+      "Bash(node build.js)",
+      "Bash(find /home/huyen/huyennkAI.github.io -type f -name *.html -o -name *.css -o -name *.js -o -name *.json)",
+      "Bash(npm run:*)"
     ]
   }
 }
