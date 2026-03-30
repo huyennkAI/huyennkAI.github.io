@@ -2,7 +2,13 @@
   "permissions": {
     "allow": [
       "Bash(pip install:*)",
-      "Bash(python3 -m playwright install chromium)"
+      "Bash(python3 -m playwright install chromium)",
+      "Bash(ls -lah /home/huyen/huyennkAI.github.io/*.png /home/huyen/huyennkAI.github.io/package*.json)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git remote:*)",
+      "Bash(git push:*)",
+      "Bash(node build.js)"
     ]
   }
 }
