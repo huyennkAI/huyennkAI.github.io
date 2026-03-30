@@ -53,8 +53,8 @@ const html = `<!DOCTYPE html>
 </head>
 <body>
 
-    <!-- STARFIELD BACKGROUND -->
-    <canvas id="starfield"></canvas>
+    <!-- SPACEKIT 3D BACKGROUND -->
+    <div id="spacekit-container"></div>
     <div class="nebula-layer"></div>
 
     <!-- CONTENT -->
@@ -64,6 +64,7 @@ ${bodyContent}
 
     </div>
 
+    <script src="https://typpo.github.io/spacekit/build/spacekit.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

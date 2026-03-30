@@ -10,7 +10,12 @@
       "Bash(git push:*)",
       "Bash(node build.js)",
       "Bash(find /home/huyen/huyennkAI.github.io -type f -name *.html -o -name *.css -o -name *.js -o -name *.json)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebSearch",
+      "WebFetch(domain:typpo.github.io)",
+      "WebFetch(domain:www.npmjs.com)"
     ]
   }
 }

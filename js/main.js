@@ -1,115 +1,45 @@
 // ══════════════════════════════════════════
-// STARFIELD ANIMATION
+// SPACEKIT 3D SPACE BACKGROUND
 // ══════════════════════════════════════════
-const canvas = document.getElementById('starfield');
-const ctx = canvas.getContext('2d');
-let stars = [];
-let shootingStars = [];
+(function initSpaceKit() {
+    const container = document.getElementById('spacekit-container');
+    if (!container || typeof Spacekit === 'undefined') return;
 
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-}
-
-function createStars() {
-    stars = [];
-    const count = Math.floor((canvas.width * canvas.height) / 4000);
-    for (let i = 0; i < count; i++) {
-        stars.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            radius: Math.random() * 1.5 + 0.3,
-            opacity: Math.random() * 0.8 + 0.2,
-            twinkleSpeed: Math.random() * 0.02 + 0.005,
-            twinkleOffset: Math.random() * Math.PI * 2,
-            drift: (Math.random() - 0.5) * 0.05
-        });
-    }
-}
-
-function createShootingStar() {
-    if (Math.random() < 0.002) {
-        shootingStars.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height * 0.5,
-            length: Math.random() * 80 + 40,
-            speed: Math.random() * 8 + 4,
-            angle: Math.PI / 4 + (Math.random() - 0.5) * 0.3,
-            opacity: 1,
-            decay: 0.015 + Math.random() * 0.01
-        });
-    }
-}
-
-function drawStars(time) {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    stars.forEach(star => {
-        const twinkle = Math.sin(time * star.twinkleSpeed + star.twinkleOffset);
-        const opacity = star.opacity * (0.6 + twinkle * 0.4);
-        const radius = star.radius * (0.8 + twinkle * 0.2);
-
-        ctx.beginPath();
-        ctx.arc(star.x, star.y, radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(200, 220, 255, ${opacity})`;
-        ctx.fill();
-
-        // Glow for brighter stars
-        if (star.radius > 1) {
-            ctx.beginPath();
-            ctx.arc(star.x, star.y, radius * 3, 0, Math.PI * 2);
-            const gradient = ctx.createRadialGradient(
-                star.x, star.y, 0,
-                star.x, star.y, radius * 3
-            );
-            gradient.addColorStop(0, `rgba(56, 189, 248, ${opacity * 0.3})`);
-            gradient.addColorStop(1, 'rgba(56, 189, 248, 0)');
-            ctx.fillStyle = gradient;
-            ctx.fill();
-        }
-
-        // Slow drift
-        star.y += star.drift;
-        if (star.y > canvas.height + 5) star.y = -5;
-        if (star.y < -5) star.y = canvas.height + 5;
+    const sim = new Spacekit.Simulation(container, {
+        basePath: 'https://typpo.github.io/spacekit/src',
+        startDate: new Date(2025, 0, 1),
+        jdPerSecond: 0.5,
+        camera: {
+            initialPosition: [2, -8, 4],
+            enableDrift: true,
+        },
+        debug: {
+            showAxes: false,
+            showGrid: false,
+            showStats: false,
+        },
     });
 
-    // Draw shooting stars
-    createShootingStar();
-    shootingStars = shootingStars.filter(s => s.opacity > 0);
-    shootingStars.forEach(s => {
-        const endX = s.x - Math.cos(s.angle) * s.length;
-        const endY = s.y - Math.sin(s.angle) * s.length;
+    // Deep space skybox
+    sim.createSkybox(Spacekit.SkyboxPresets.NASA_TYCHO);
 
-        const gradient = ctx.createLinearGradient(s.x, s.y, endX, endY);
-        gradient.addColorStop(0, `rgba(56, 189, 248, ${s.opacity})`);
-        gradient.addColorStop(1, 'rgba(56, 189, 248, 0)');
+    // Star field
+    sim.createStars();
 
-        ctx.beginPath();
-        ctx.moveTo(s.x, s.y);
-        ctx.lineTo(endX, endY);
-        ctx.strokeStyle = gradient;
-        ctx.lineWidth = 1.5;
-        ctx.stroke();
+    // Sun at center
+    sim.createObject('sun', Spacekit.SpaceObjectPresets.SUN);
 
-        // Head glow
-        ctx.beginPath();
-        ctx.arc(s.x, s.y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, 255, 255, ${s.opacity})`;
-        ctx.fill();
+    // Inner planets — orbits create beautiful rings
+    sim.createObject('mercury', Spacekit.SpaceObjectPresets.MERCURY);
+    sim.createObject('venus', Spacekit.SpaceObjectPresets.VENUS);
+    sim.createObject('earth', Spacekit.SpaceObjectPresets.EARTH);
+    sim.createObject('mars', Spacekit.SpaceObjectPresets.MARS);
+    sim.createObject('jupiter', Spacekit.SpaceObjectPresets.JUPITER);
 
-        s.x += Math.cos(s.angle) * s.speed;
-        s.y += Math.sin(s.angle) * s.speed;
-        s.opacity -= s.decay;
-    });
-
-    requestAnimationFrame(drawStars);
-}
-
-resizeCanvas();
-createStars();
-requestAnimationFrame(drawStars);
-window.addEventListener('resize', () => { resizeCanvas(); createStars(); });
+    // Disable pointer events on the container so content is interactive
+    // but allow scroll-wheel zoom on the 3D scene
+    container.style.pointerEvents = 'none';
+})();
 
 // ══════════════════════════════════════════
 // NAVBAR SCROLL EFFECT
