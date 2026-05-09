@@ -843,6 +843,9 @@ section {
 .project-gradient-3 {
     background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
 }
+.project-gradient-4 {
+    background: linear-gradient(135deg, #2c1810, #4a2c2a, #8b3a3a);
+}
 
 .project-cover::after {
     content: '';
