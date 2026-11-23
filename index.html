@@ -3,644 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyen Khanh Huyen — AI Researcher & Economist</title>
-    <meta name="description" content="Portfolio of Nguyen Khanh Huyen — AI Researcher, Economics Student, Math Enthusiast exploring the intersection of AI, economics, and mathematics.">
+    <title>Nguyen Khanh Huyen</title>
+    <meta name="author" content="Nguyen Khanh Huyen">
+    <meta name="description" content="Nguyen Khanh Huyen — AI researcher working on optimization dynamics, implicit-depth models, and safety-preserving LLM fine-tuning.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <main class="site">
 
-    <!-- SPACEKIT 3D BACKGROUND -->
-    <div id="spacekit-container"></div>
-    <div class="nebula-layer"></div>
-
-    <!-- CONTENT -->
-    <div class="content-layer">
-
-        <!-- NAVIGATION -->
-        <nav id="navbar">
-            <div class="nav-logo">NKH.</div>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#awards">Awards</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.8rem;">Contact</a></li>
-            </ul>
-        </nav>
-
-        <!-- HERO -->
-        <section class="hero" id="hero">
-            <div class="orbit-ring orbit-ring-1"></div>
-            <div class="orbit-ring orbit-ring-2"></div>
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="dot"></span>
-                    Open to Research Collaborations
-                </div>
-                <h1>
-                    <span class="gradient-text">Nguyen Khanh Huyen</span>
-                    <span class="line-2">AI Researcher · Economist · Math Enthusiast</span>
-                </h1>
-                <p class="hero-tagline">
-                    "Exploring the intersection of artificial intelligence, economics, and mathematics"
+        <!-- HEADER: name, bio, links, photo -->
+        <header class="profile">
+            <div class="profile-copy">
+                <h1 class="profile-name">Nguyen Khanh Huyen</h1>
+                <p>
+                    I am an AI researcher interested in the <strong>mathematical foundations</strong> of modern
+                    machine learning. I am graduating early in 2026 from
+                    <a href="https://ftu.edu.vn/" target="_blank">Foreign Trade University</a>
+                    (B.A. International Business Economics, GPA 3.68, Top 1%).
                 </p>
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <div class="number">5+</div>
-                        <div class="label">National Awards</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="number">5+</div>
-                        <div class="label">Research Projects</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="number">3.68</div>
-                        <div class="label">GPA</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="number">7.0</div>
-                        <div class="label">IELTS</div>
-                    </div>
-                </div>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-ghost">Get in Touch</a>
-                </div>
+                <p>
+                    My research centers on three intertwined questions: the <strong>optimization dynamics</strong>
+                    of deep learning (grokking, SGD trajectories, implicit-depth models),
+                    <strong>safety-preserving parameter-efficient adaptation</strong> of foundation models,
+                    and the statistical and geometric foundations of generalization.
+                </p>
+                <p>
+                    I am a research assistant at <a href="https://ftulabs.github.io/" target="_blank">FTU Labs</a>
+                    under <a href="https://scholar.google.com/citations?user=knSbt0oAAAAJ&hl=en" target="_blank">Dr. Phung Duy Quang</a>,
+                    and a machine learning engineer at <a href="https://venerian.space/en" target="_blank">Venera AI</a>.
+                    I came to ML from mathematical olympiads and quantitative economics, and I am now moving toward
+                    doctoral research in optimization theory and large-scale language model training.
+                </p>
+                <p class="profile-links">
+                    <a href="mailto:khhuyen1601@gmail.com">Email</a> &nbsp;/&nbsp;
+                    <a href="https://github.com/huyennkAI" target="_blank">GitHub</a> &nbsp;/&nbsp;
+                    <a href="https://scholar.google.com" target="_blank">Google Scholar</a> &nbsp;/&nbsp;
+                    <a href="https://www.facebook.com/huyn.nguynkhah" target="_blank">Facebook</a>
+                </p>
             </div>
-            <div class="hero-scroll">
-                <span>Scroll</span>
-                <div class="scroll-line"></div>
+            <div class="profile-photo">
+                <img src="https://avatars.githubusercontent.com/huyennkAI" alt="Nguyen Khanh Huyen">
             </div>
-        </section>
-
-                <div class="section-divider"></div>
-
-        <!-- ABOUT -->
-        <section id="about">
-            <div class="section-container">
-                <div class="section-header reveal">
-                    <div class="section-label">01 — About</div>
-                    <h2 class="section-title">The Story Behind<br>the Research</h2>
-                </div>
-                <div class="about-grid">
-                    <div class="about-visual reveal reveal-delay-1">
-                        <div class="about-image-frame">
-                            <img src="https://avatars.githubusercontent.com/huyennkAI" alt="Nguyen Khanh Huyen" class="profile-avatar">
-                        </div>
-                        <div class="about-floating-card" style="animation: float 4s ease-in-out infinite;">
-                            <div class="uni">Foreign Trade University</div>
-                            <div class="major">International Business Economics</div>
-                        </div>
-                    </div>
-                    <div class="about-text reveal reveal-delay-2">
-                        <p>
-                            I'm <strong>Nguyen Khanh Huyen</strong>, graduating early in 2026 from Foreign Trade
-                            University with a focus on the <strong>mathematical foundations</strong> of modern
-                            machine learning.
-                        </p>
-                        <p>
-                            My research centers on three intertwined questions: the <strong>optimization
-                            dynamics</strong> of deep learning (grokking, SGD trajectories, implicit-depth
-                            models), <strong>safety-preserving parameter-efficient adaptation</strong> of
-                            foundation models, and the statistical/geometric foundations of generalization.
-                        </p>
-                        <p>
-                            As a <strong>TPer'61</strong> and <strong>FTUer'61</strong>, I came to ML from a
-                            background in mathematical olympiads and quantitative economics — and I'm now
-                            transitioning toward doctoral research at the intersection of optimization theory
-                            and large-scale language model training.
-                        </p>
-                        <div class="about-details">
-                            <div class="about-detail">
-                                <span class="key">Location</span>
-                                <span class="value">Hanoi, Vietnam</span>
-                            </div>
-                            <div class="about-detail">
-                                <span class="key">University</span>
-                                <span class="value">Foreign Trade Uni.</span>
-                            </div>
-                            <div class="about-detail">
-                                <span class="key">GPA</span>
-                                <span class="value">3.68</span>
-                            </div>
-                            <div class="about-detail">
-                                <span class="key">English</span>
-                                <span class="value">IELTS 7.0</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-                <div class="section-divider"></div>
+        </header>
 
         <!-- RESEARCH INTERESTS -->
         <section id="research">
-            <div class="section-container">
-                <div class="section-header reveal">
-                    <div class="section-label">02 — Research</div>
-                    <h2 class="section-title">Domains I Explore</h2>
-                </div>
-                <div class="research-grid">
-                    <div class="research-card reveal reveal-delay-1">
-                        <div class="research-icon">⚡</div>
-                        <h3>Optimization Dynamics & Grokking</h3>
-                        <p>Studying the geometry of SGD trajectories in deep networks — when and why over-parameterized models suddenly generalize after appearing stuck, and how spectral methods can shape the optimizer trajectory deliberately.</p>
-                    </div>
-                    <div class="research-card reveal reveal-delay-2">
-                        <div class="research-icon">∞</div>
-                        <h3>Implicit-Depth & Fixed-Point Models</h3>
-                        <p>Exploring deep equilibrium architectures with weight-tied layers, Anderson-accelerated fixed-point iteration, and orthogonalized optimizers (Muon, Newton–Schulz) — elegant, memory-efficient, and mathematically rich.</p>
-                    </div>
-                    <div class="research-card reveal reveal-delay-3">
-                        <div class="research-icon">🛡️</div>
-                        <h3>Safety-Preserving LLM Fine-Tuning</h3>
-                        <p>How can low-rank parameter-efficient adaptation (LoRA, QLoRA) preserve instruction-format alignment under domain shift? Practical and theoretical sides of this question — especially for low-resource languages like Vietnamese.</p>
-                    </div>
-                    <div class="research-card reveal reveal-delay-4">
-                        <div class="research-icon">🧮</div>
-                        <h3>Mathematical Foundations</h3>
-                        <p>Convex/nonconvex optimization, spectral methods (SVD, Newton–Schulz), stochastic processes, and the analytical machinery — Riemannian/information geometry, RKHS — that underpins modern ML theory.</p>
-                    </div>
-                </div>
-            </div>
+            <h2>Research</h2>
+            <ul class="interests">
+                <li>
+                    <strong>Optimization dynamics &amp; grokking.</strong>
+                    When and why over-parameterized models suddenly generalize after appearing stuck, and how
+                    spectral methods can shape the SGD trajectory deliberately.
+                </li>
+                <li>
+                    <strong>Implicit-depth &amp; fixed-point models.</strong>
+                    Deep equilibrium architectures with weight-tied layers, Anderson-accelerated fixed-point
+                    iteration, and orthogonalized optimizers (Muon, Newton–Schulz).
+                </li>
+                <li>
+                    <strong>Safety-preserving LLM fine-tuning.</strong>
+                    How low-rank adaptation (LoRA, QLoRA) can preserve instruction-format alignment under domain
+                    shift, especially for low-resource languages like Vietnamese.
+                </li>
+                <li>
+                    <strong>Mathematical foundations.</strong>
+                    Convex and nonconvex optimization, spectral methods, stochastic processes, and the
+                    Riemannian/information geometry and RKHS machinery behind modern ML theory.
+                </li>
+            </ul>
         </section>
-
-                <div class="section-divider"></div>
-
-        <!-- EXPERIENCE -->
-        <section id="experience">
-            <div class="section-container">
-                <div class="section-header reveal">
-                    <div class="section-label">03 — Experience</div>
-                    <h2 class="section-title">Research Journey</h2>
-                </div>
-                <div class="timeline">
-                    <div class="timeline-item reveal">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">2022 — 2026 (Early Graduation)</div>
-                        <h3>Foreign Trade University</h3>
-                        <div class="role">B.A. International Business Economics — GPA 3.68 (Top 1%)</div>
-                        <p>Graduating one year early with a Top-1% record. Probability Theory 10.0, Advanced Mathematics 9.2; self-taught deep learning, convex/nonconvex optimization, and stochastic processes alongside coursework.</p>
-                    </div>
-                    <div class="timeline-item reveal reveal-delay-1">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Present</div>
-                        <h3>Research Assistant — <a href="https://ftulabs.github.io/" target="_blank">FTU Labs</a></h3>
-                        <div class="role">Faculty of Technology and Data Science — under <a href="https://scholar.google.com/citations?user=knSbt0oAAAAJ&hl=en" target="_blank">Dr. Phung Duy Quang</a></div>
-                        <p>Working on optimization-theoretic questions in deep learning: grokking dynamics, spectral methods on the SGD trajectory, and implicit-depth (DEQ) models with orthogonalized Muon updates.</p>
-                    </div>
-                    <div class="timeline-item reveal reveal-delay-2">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Nov 2025 — Present</div>
-                        <h3>Machine Learning Engineer — <a href="https://venerian.space/en" target="_blank">Venera AI</a></h3>
-                        <div class="role">Parameter-efficient adaptation of LLMs for Vietnamese Traditional Medicine</div>
-                        <p>Designed a two-stage CPT → SFT pipeline for Qwen3-4B with Unsloth 4-bit + LoRA and DeepSpeed ZeRO-2/3. Reached <strong>55.24%</strong> on a domain MCQ benchmark (vs. 53.33% baseline) with <strong>0%</strong> format deviation; deployed a FastAPI/vLLM serving stack cutting inference latency by ~<strong>40%</strong>.</p>
-                    </div>
-                    <div class="timeline-item reveal reveal-delay-3">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-date">Aug 2025 — Dec 2025</div>
-                        <h3>AI Engineer — <a href="https://sphoton.com/" target="_blank">Sphoton Technology</a></h3>
-                        <div class="role">Sequential decision-making for portfolio allocation</div>
-                        <p>Built a portfolio allocation agent over 28 equity and crypto assets with state features from prices, moving averages, and rolling correlations. Trained on 8 years of historical data; attained the <strong>highest Sharpe ratio</strong> against Min-Variance, Max-Returns, and auto-encoder baselines.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-                <div class="section-divider"></div>
-
-        <!-- EDUCATION -->
-        <section id="education">
-            <div class="section-container">
-                <div class="section-header reveal">
-                    <div class="section-label">04 — Education</div>
-                    <h2 class="section-title">Academic Foundation</h2>
-                </div>
-                <div class="education-card reveal">
-                    <div class="edu-emblem">FTU</div>
-                    <div class="edu-info">
-                        <h3>Foreign Trade University</h3>
-                        <p class="degree">B.A. International Business Economics</p>
-                        <div class="edu-badges">
-                            <div class="edu-badge">
-                                GPA <span class="badge-value">3.66</span>
-                            </div>
-                            <div class="edu-badge">
-                                IELTS <span class="badge-value">7.0</span>
-                            </div>
-                            <div class="edu-badge">
-                                Awards <span class="badge-value">5+</span>
-                            </div>
-                            <div class="edu-badge">
-                                Research <span class="badge-value">3+ Projects</span>
-                            </div>
-                        </div>
-                        <div class="edu-courses">
-                            <div class="edu-courses-label">Related Courses</div>
-                            <div class="edu-course-list">
-                                <div class="edu-course">Probability Theory and Mathematical Statistics <span class="course-grade">10.0/10</span></div>
-                                <div class="edu-course">Programming for Data Analysis and Scientific Computing <span class="course-grade">9.6/10</span></div>
-                                <div class="edu-course">Advanced Mathematics <span class="course-grade">9.2/10</span></div>
-                                <div class="edu-course">Research Methods <span class="course-grade">9.1/10</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-                <div class="section-divider"></div>
 
         <!-- PUBLICATIONS -->
         <section id="publications">
-            <div class="section-container">
-                <div class="section-header reveal">
-                    <div class="section-label">05 — Publications</div>
-                    <h2 class="section-title">Journal Papers</h2>
-                </div>
+            <h2>Publications</h2>
+            <p class="section-intro">Peer-reviewed journal papers.</p>
 
-                <!-- Journal Papers -->
-                <div class="pub-category reveal">
-                    <div class="pub-category-header">
-                        <span class="pub-level pub-level--journal">Journal Papers</span>
-                    </div>
-                    <div class="pub-list">
-                        <a href="https://doi.org/10.1155/jama/9089827" target="_blank" class="pub-item">
-                            <div class="pub-icon">📄</div>
-                            <div class="pub-info">
-                                <h4>Analysis and Forecasting of Bitcoin Price Volatility: A Deep Learning Approach Using DNN, LSTM, Transformers, and the ARMA‑GARCH Model</h4>
-                                <div class="pub-authors">Phung Duy Quang, Nguyen Khanh Huyen, Hoang Nam Quyen</div>
-                                <div class="pub-detail">Journal of Applied Mathematics · Vol. 2025, No. 1, ID 9089827 · Wiley · ESCI + Scopus Q3 (SJR 2024)</div>
-                            </div>
-                        </a>
-                        <a href="https://doi.org/10.63385/sadr.v1i1.244" target="_blank" class="pub-item">
-                            <div class="pub-icon">📄</div>
-                            <div class="pub-info">
-                                <h4>The Role of Trade Openness and Macroeconomic Factors in Shaping FDI Inflows to Vietnam</h4>
-                                <div class="pub-authors">Phung Duy Quang, Nguyen Khanh Huyen, Pham Thi My Linh, Nguyen Nhat Minh</div>
-                                <div class="pub-detail">Southeast Asia Development Research · Vol. 1, No. 1, pp. 56–68 · NIEP · 2025 · ACI-indexed</div>
-                            </div>
-                        </a>
-                    </div>
+            <div class="entry">
+                <div class="entry-tag">J. Appl. Math.<br>2025</div>
+                <div class="entry-body">
+                    <a class="entry-title" href="https://doi.org/10.1155/jama/9089827" target="_blank">Analysis and Forecasting of Bitcoin Price Volatility: A Deep Learning Approach Using DNN, LSTM, Transformers, and the ARMA‑GARCH Model</a>
+                    <div>Phung Duy Quang, <span class="me">Nguyen Khanh Huyen</span>, Hoang Nam Quyen</div>
+                    <div class="entry-meta"><em>Journal of Applied Mathematics</em>, Vol. 2025, No. 1, ID 9089827 · Wiley · ESCI + Scopus Q3</div>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-tag">SADR<br>2025</div>
+                <div class="entry-body">
+                    <a class="entry-title" href="https://doi.org/10.63385/sadr.v1i1.244" target="_blank">The Role of Trade Openness and Macroeconomic Factors in Shaping FDI Inflows to Vietnam</a>
+                    <div>Phung Duy Quang, <span class="me">Nguyen Khanh Huyen</span>, Pham Thi My Linh, Nguyen Nhat Minh</div>
+                    <div class="entry-meta"><em>Southeast Asia Development Research</em>, Vol. 1, No. 1, pp. 56–68 · NIEP · ACI-indexed</div>
                 </div>
             </div>
         </section>
 
-                <div class="section-divider"></div>
+        <!-- EXPERIENCE -->
+        <section id="experience">
+            <h2>Experience</h2>
 
-        <!-- AWARDS & ACHIEVEMENTS -->
-        <section id="awards">
-            <div class="section-container">
-                <div class="section-header reveal">
-                    <div class="section-label">06 — Awards & Achievements</div>
-                    <h2 class="section-title">Recognition &<br>Accomplishments</h2>
+            <div class="entry">
+                <div class="entry-tag">Present</div>
+                <div class="entry-body">
+                    <span class="entry-title">Research Assistant, <a href="https://ftulabs.github.io/" target="_blank">FTU Labs</a></span>
+                    <div class="entry-meta">Faculty of Technology and Data Science, under <a href="https://scholar.google.com/citations?user=knSbt0oAAAAJ&hl=en" target="_blank">Dr. Phung Duy Quang</a></div>
+                    <p>Optimization-theoretic questions in deep learning: grokking dynamics, spectral methods on the SGD trajectory, and implicit-depth (DEQ) models with orthogonalized Muon updates.</p>
                 </div>
-        
-                <!-- International -->
-                <div class="awards-category reveal">
-                    <div class="awards-category-header">
-                        <span class="awards-level awards-level--international">International</span>
-                    </div>
-                    <div class="awards-list">
-                        <div class="award-item">
-                            <div class="award-icon">🥈</div>
-                            <div class="award-info">
-                                <h4>Second Prize, ICPC Asia Ho Chi Minh City Regional</h4>
-                                <span class="award-detail">Non-IT Division, 2025–2026</span>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-tag">Nov 2025 –<br>Present</div>
+                <div class="entry-body">
+                    <span class="entry-title">Machine Learning Engineer, <a href="https://venerian.space/en" target="_blank">Venera AI</a></span>
+                    <div class="entry-meta">Parameter-efficient adaptation of LLMs for Vietnamese Traditional Medicine</div>
+                    <p>Designed a two-stage CPT → SFT pipeline for Qwen3-4B with Unsloth 4-bit + LoRA and DeepSpeed ZeRO-2/3. Reached <strong>55.24%</strong> on a domain MCQ benchmark (vs. 53.33% baseline) with <strong>0%</strong> format deviation; deployed a FastAPI/vLLM serving stack cutting inference latency by ~<strong>40%</strong>.</p>
                 </div>
-        
-                <!-- National -->
-                <div class="awards-category reveal reveal-delay-1">
-                    <div class="awards-category-header">
-                        <span class="awards-level awards-level--national">National</span>
-                    </div>
-                    <div class="awards-list">
-                        <div class="award-item">
-                            <div class="award-icon">🏅</div>
-                            <div class="award-info">
-                                <h4>Consolation Prize, Vietnam National Collegiate Informatics Olympiad</h4>
-                                <span class="award-detail">Non-IT Track, 2025–2026</span>
-                            </div>
-                        </div>
-                        <div class="award-item">
-                            <div class="award-icon">🏅</div>
-                            <div class="award-info">
-                                <h4>Consolation Prize, Vietnam National Collegiate AI Olympiad</h4>
-                                <span class="award-detail">2025–2026</span>
-                            </div>
-                        </div>
-                        <div class="award-item">
-                            <div class="award-icon">🥉</div>
-                            <div class="award-info">
-                                <h4>Third Prize (Algebra, Division A), National Mathematics Olympiad for University Students</h4>
-                                <span class="award-detail">2024–2025</span>
-                            </div>
-                        </div>
-                        <div class="award-item">
-                            <div class="award-icon">🥈</div>
-                            <div class="award-info">
-                                <h4>Second Prize (Calculus, Division A), National Mathematics Olympiad for University Students</h4>
-                                <span class="award-detail">2022–2023</span>
-                            </div>
-                        </div>
-                        <div class="award-item">
-                            <div class="award-icon">📋</div>
-                            <div class="award-info">
-                                <h4>Participant, National Mathematics Olympiad for University Students</h4>
-                                <span class="award-detail">2022–2023, 2024–2025</span>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-tag">Aug 2025 –<br>Dec 2025</div>
+                <div class="entry-body">
+                    <span class="entry-title">AI Engineer, <a href="https://sphoton.com/" target="_blank">Sphoton Technology</a></span>
+                    <div class="entry-meta">Sequential decision-making for portfolio allocation</div>
+                    <p>Built a portfolio allocation agent over 28 equity and crypto assets with state features from prices, moving averages, and rolling correlations. Trained on 8 years of historical data; attained the <strong>highest Sharpe ratio</strong> against Min-Variance, Max-Returns, and auto-encoder baselines.</p>
                 </div>
-        
-                <!-- Regional -->
-                <div class="awards-category reveal reveal-delay-2">
-                    <div class="awards-category-header">
-                        <span class="awards-level awards-level--regional">Regional</span>
-                    </div>
-                    <div class="awards-list">
-                        <div class="award-item">
-                            <div class="award-icon">🥉</div>
-                            <div class="award-info">
-                                <h4>Third Prize, Northern Region Collegiate AI Olympiad</h4>
-                                <span class="award-detail">2025–2026</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- University-Level -->
-                <div class="awards-category reveal reveal-delay-3">
-                    <div class="awards-category-header">
-                        <span class="awards-level awards-level--university">University</span>
-                    </div>
-                    <div class="awards-list">
-                        <div class="award-item">
-                            <div class="award-icon">🥇</div>
-                            <div class="award-info">
-                                <h4>First Prize (Algebra), University Mathematics Olympiad</h4>
-                                <span class="award-detail">2025–2026, 2024–2025</span>
-                            </div>
-                        </div>
-                        <div class="award-item">
-                            <div class="award-icon">🥈</div>
-                            <div class="award-info">
-                                <h4>Second Prize (Calculus), University Mathematics Olympiad</h4>
-                                <span class="award-detail">2025–2026, 2024–2025</span>
-                            </div>
-                        </div>
-                        <div class="award-item">
-                            <div class="award-icon">🥇</div>
-                            <div class="award-info">
-                                <h4>First Prize (Calculus), University Mathematics Olympiad</h4>
-                                <span class="award-detail">2022–2023</span>
-                            </div>
-                        </div>
-                        <div class="award-item">
-                            <div class="award-icon">🥉</div>
-                            <div class="award-info">
-                                <h4>Third Prize (Algebra), University Mathematics Olympiad</h4>
-                                <span class="award-detail">2022–2023</span>
-                            </div>
-                        </div>
-                        <div class="award-item">
-                            <div class="award-icon">📜</div>
-                            <div class="award-info">
-                                <h4>Certificate of Excellence, University Recognition for National Math Olympiad</h4>
-                                <span class="award-detail">2022–2023</span>
-                            </div>
-                        </div>
-                        <div class="award-item">
-                            <div class="award-icon">🏅</div>
-                            <div class="award-info">
-                                <h4>Consolation Prize, Student Scientific Research Competition</h4>
-                                <span class="award-detail">2023–2024, FTU – International Business Economics Institute</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Inter-University -->
-                <div class="awards-category reveal reveal-delay-4">
-                    <div class="awards-category-header">
-                        <span class="awards-level awards-level--inter">Inter-University</span>
-                    </div>
-                    <div class="awards-list">
-                        <div class="award-item">
-                            <div class="award-icon">🥈</div>
-                            <div class="award-info">
-                                <h4>Runner-up, Economics Research Champion</h4>
-                                <span class="award-detail">2024–2025, organized by NEU Club</span>
-                            </div>
-                        </div>
-                        <div class="award-item">
-                            <div class="award-icon">🏅</div>
-                            <div class="award-info">
-                                <h4>Top 8, Economics Olympiad</h4>
-                                <span class="award-detail">2023–2024, organized by Academy of Finance Club</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Provincial & Pre-University -->
-                <div class="awards-category reveal reveal-delay-5">
-                    <div class="awards-category-header">
-                        <span class="awards-level awards-level--provincial">Provincial & Pre-University</span>
-                    </div>
-                    <div class="awards-list">
-                        <div class="award-item">
-                            <div class="award-icon">⭐</div>
-                            <div class="award-info">
-                                <h4>Member, National Olympiad Training Team in Mathematics</h4>
-                                <span class="award-detail"></span>
-                            </div>
-                        </div>
-                        <div class="award-item">
-                            <div class="award-icon">🥇</div>
-                            <div class="award-info">
-                                <h4>First Prize, Provincial Mathematics Olympiad</h4>
-                                <span class="award-detail">2018–2019</span>
-                            </div>
-                        </div>
-                        <div class="award-item">
-                            <div class="award-icon">🥈</div>
-                            <div class="award-info">
-                                <h4>Second Prize, Provincial Mathematics Olympiad</h4>
-                                <span class="award-detail">2021–2022</span>
-                            </div>
-                        </div>
-                        <div class="award-item">
-                            <div class="award-icon">🥉</div>
-                            <div class="award-info">
-                                <h4>Third Prize, Provincial Mathematics Olympiad</h4>
-                                <span class="award-detail">2020–2021</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
             </div>
         </section>
-
-                <div class="section-divider"></div>
 
         <!-- PROJECTS -->
         <section id="projects">
-            <div class="section-container">
-                <div class="section-header reveal">
-                    <div class="section-label">07 — Projects</div>
-                    <h2 class="section-title">Selected Work</h2>
+            <h2>Projects</h2>
+
+            <div class="entry">
+                <div class="entry-tag">Grokking</div>
+                <div class="entry-body">
+                    <span class="entry-title">Spectral &amp; Spatial Acceleration of Grokking</span>
+                    <div class="entry-meta"><a href="https://github.com/huyennkAI" target="_blank">code</a></div>
+                    <p>Extending Grokfast (Lee et al., 2024) with SVD-based gradient filtering and spectral embedding initialization from input co-occurrence statistics. Singular-spectrum diagnostics show gradient updates do <em>not</em> lie in a low-rank subspace, motivating a hybrid temporal–spatial filter on the optimizer trajectory.</p>
                 </div>
-                <div class="projects-grid">
-                    <div class="project-card reveal reveal-delay-1">
-                        <div class="project-cover project-gradient-1">
-                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 1;">
-                                <span style="font-size: 3rem;">⚡</span>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div class="project-tags">
-                                <span class="project-tag">Grokking</span>
-                                <span class="project-tag">SGD Dynamics</span>
-                                <span class="project-tag">Spectral Methods</span>
-                            </div>
-                            <h3>Spectral &amp; Spatial Acceleration of Grokking</h3>
-                            <p>Extending Grokfast (Lee et al., 2024) with SVD-based gradient filtering and spectral embedding initialization from input co-occurrence statistics. Singular-spectrum diagnostics show gradient updates do <em>not</em> lie in a low-rank subspace — motivating a hybrid temporal–spatial filter on the optimizer trajectory.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/huyennkAI" class="project-link" target="_blank">
-                                    <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                    GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card reveal reveal-delay-2">
-                        <div class="project-cover project-gradient-2">
-                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 1;">
-                                <span style="font-size: 3rem;">∞</span>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div class="project-tags">
-                                <span class="project-tag">DEQ</span>
-                                <span class="project-tag">Muon Optimizer</span>
-                                <span class="project-tag">Implicit Models</span>
-                            </div>
-                            <h3>Deep Equilibrium GPT with Muon Updates</h3>
-                            <p>Weight-tied DEQ Transformer with Anderson-accelerated fixed-point iteration, trained under a Pretrain → Distillation → Jacobian-regularized curriculum. Newton–Schulz-orthogonalized Muon updates impose an implicit spectral constraint and yield a smaller train/val-loss gap than the Transformer baseline at matched parameters.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/huyennkAI" class="project-link" target="_blank">
-                                    <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                    GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card reveal reveal-delay-3">
-                        <div class="project-cover project-gradient-3">
-                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 1;">
-                                <span style="font-size: 3rem;">🛡️</span>
-                            </div>
-                        </div>
-                        <div class="project-body">
-                            <div class="project-tags">
-                                <span class="project-tag">LLM Fine-Tuning</span>
-                                <span class="project-tag">LoRA</span>
-                                <span class="project-tag">Safety</span>
-                            </div>
-                            <h3>Format-Preserving CPT for Vietnamese Domain LLMs</h3>
-                            <p>Two-stage CPT → SFT pipeline for Qwen3-4B on Vietnamese Traditional Medicine using Unsloth 4-bit + LoRA and DeepSpeed ZeRO-2/3. Reached 55.24% on a domain MCQ benchmark (vs. 53.33% baseline) with 0% format deviation — preserved instruction-format alignment under distribution shift.</p>
-                            <div class="project-links">
-                                <a href="https://venerian.space" class="project-link" target="_blank">
-                                    <svg viewBox="0 0 24 24" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-                                    venerian.space
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-tag">DEQ</div>
+                <div class="entry-body">
+                    <span class="entry-title">Deep Equilibrium GPT with Muon Updates</span>
+                    <div class="entry-meta"><a href="https://github.com/huyennkAI" target="_blank">code</a></div>
+                    <p>Weight-tied DEQ Transformer with Anderson-accelerated fixed-point iteration, trained under a Pretrain → Distillation → Jacobian-regularized curriculum. Newton–Schulz-orthogonalized Muon updates impose an implicit spectral constraint and yield a smaller train/val-loss gap than the Transformer baseline at matched parameters.</p>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-tag">LLM FT</div>
+                <div class="entry-body">
+                    <span class="entry-title">Format-Preserving CPT for Vietnamese Domain LLMs</span>
+                    <div class="entry-meta"><a href="https://venerian.space" target="_blank">venerian.space</a></div>
+                    <p>Two-stage CPT → SFT pipeline for Qwen3-4B on Vietnamese Traditional Medicine using Unsloth 4-bit + LoRA and DeepSpeed ZeRO-2/3. Reached 55.24% on a domain MCQ benchmark (vs. 53.33% baseline) with 0% format deviation, preserving instruction-format alignment under distribution shift.</p>
                 </div>
             </div>
         </section>
 
-                <div class="section-divider"></div>
+        <!-- EDUCATION -->
+        <section id="education">
+            <h2>Education</h2>
+
+            <div class="entry">
+                <div class="entry-tag">2022 –<br>2026</div>
+                <div class="entry-body">
+                    <span class="entry-title">Foreign Trade University</span>
+                    <div class="entry-meta">B.A. International Business Economics · GPA 3.68 (Top 1%) · early graduation · IELTS 7.0</div>
+                    <p>Related courses: Probability Theory and Mathematical Statistics (10.0), Programming for Data Analysis and Scientific Computing (9.6), Advanced Mathematics (9.2), Research Methods (9.1). Self-taught deep learning, convex/nonconvex optimization, and stochastic processes alongside coursework.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- AWARDS -->
+        <section id="awards">
+            <h2>Awards</h2>
+
+            <h3>International</h3>
+            <ul class="awards">
+                <li><span class="year">2025–26</span> Second Prize, ICPC Asia Ho Chi Minh City Regional (Non-IT Division)</li>
+            </ul>
+
+            <h3>National</h3>
+            <ul class="awards">
+                <li><span class="year">2025–26</span> Consolation Prize, Vietnam National Collegiate Informatics Olympiad (Non-IT Track)</li>
+                <li><span class="year">2025–26</span> Consolation Prize, Vietnam National Collegiate AI Olympiad</li>
+                <li><span class="year">2024–25</span> Third Prize (Algebra, Division A), National Mathematics Olympiad for University Students</li>
+                <li><span class="year">2022–23</span> Second Prize (Calculus, Division A), National Mathematics Olympiad for University Students</li>
+            </ul>
+
+            <h3>Regional</h3>
+            <ul class="awards">
+                <li><span class="year">2025–26</span> Third Prize, Northern Region Collegiate AI Olympiad</li>
+            </ul>
+
+            <h3>University &amp; inter-university</h3>
+            <ul class="awards">
+                <li><span class="year">2024–26</span> First Prize (Algebra) and Second Prize (Calculus), University Mathematics Olympiad</li>
+                <li><span class="year">2024–25</span> Runner-up, Economics Research Champion (NEU Club)</li>
+                <li><span class="year">2023–24</span> Consolation Prize, Student Scientific Research Competition (FTU)</li>
+                <li><span class="year">2023–24</span> Top 8, Economics Olympiad (Academy of Finance Club)</li>
+                <li><span class="year">2022–23</span> First Prize (Calculus) and Third Prize (Algebra), University Mathematics Olympiad</li>
+                <li><span class="year">2022–23</span> Certificate of Excellence for National Math Olympiad results</li>
+            </ul>
+
+            <h3>Pre-university</h3>
+            <ul class="awards">
+                <li><span class="year"></span> Member, National Olympiad Training Team in Mathematics</li>
+                <li><span class="year">2018–22</span> First (2019), Third (2021), and Second (2022) Prize, Provincial Mathematics Olympiad</li>
+            </ul>
+        </section>
 
         <!-- BLOG -->
         <section id="blog">
-            <div class="section-container">
-                <div class="section-header reveal">
-                    <div class="section-label">08 — Blog</div>
-                    <h2 class="section-title">Thoughts & Writing</h2>
-                </div>
-                <div class="blog-grid">
-                    <div class="blog-card reveal reveal-delay-1">
-                        <div class="blog-meta">
-                            <span class="blog-date">Dec 2025</span>
-                            <span class="blog-category">Personal</span>
-                        </div>
-                        <h3>A "Risky but Worth It" Year at FTU: 2 Months of C++ and My First AI Competition</h3>
-                        <p>I'm a student at FTU — a university best known for economics. But this year, I decided to step out of that comfort zone and try AI and competitive programming, two things I had almost no background in.</p>
-                        <a href="blog/risky-but-worth-it-2025.html" class="blog-read-more">Read more →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-                <div class="section-divider"></div>
-
-        <!-- CONTACT -->
-        <section id="contact" class="contact-section">
-            <div class="section-container">
-                <div class="section-label reveal" style="justify-content: center;">08 — Contact</div>
-                <h2 class="contact-title reveal reveal-delay-1">
-                    Let's <span class="gradient-text">Connect</span>
-                </h2>
-                <p class="contact-desc reveal reveal-delay-2">
-                    Interested in collaboration, research discussions, or just want to say hello? I'd love to hear from you.
-                </p>
-                <div class="contact-links reveal reveal-delay-3">
-                    <a href="mailto:khhuyen1601@gmail.com" class="contact-link">
-                        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                        Email
-                    </a>
-                    <a href="https://github.com/huyennkAI" target="_blank" class="contact-link">
-                        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                    <a href="https://scholar.google.com" target="_blank" class="contact-link">
-                        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
-                        Scholar
-                    </a>
-                    <a href="https://www.facebook.com/huyn.nguynkhah" target="_blank" class="contact-link">
-                        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                        Facebook
-                    </a>
-                </div>
-            </div>
+            <h2>Blog</h2>
+            <ul class="posts">
+                <li>
+                    <span class="year">Dec 2025</span>
+                    <a href="blog/risky-but-worth-it-2025.html">A "Risky but Worth It" Year at FTU: 2 Months of C++ and My First AI Competition</a>
+                </li>
+            </ul>
         </section>
 
         <!-- FOOTER -->
-        <footer>
-            <p>&copy; 2026 Nguyen Khanh Huyen. Crafted with curiosity.</p>
+        <footer class="site-footer">
+            <p>Last update: November 2026. Design inspired by <a href="https://jonbarron.info/" target="_blank">Jon Barron</a>.</p>
         </footer>
 
-    </div>
-
-    <script src="https://typpo.github.io/spacekit/build/spacekit.js"></script>
-    <script src="js/main.js"></script>
+    </main>
 </body>
 </html>

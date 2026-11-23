@@ -5,19 +5,19 @@ Personal portfolio website of **Nguyen Khanh Huyen** — AI Researcher, Economis
 ## Project Structure
 
 ```
-├── css/style.css          # Styles
-├── js/main.js             # Scripts
-├── sections/              # HTML sections
-│   ├── nav.html
-│   ├── hero.html
-│   ├── about.html
+├── css/style.css          # Site styles (minimal, blue & white)
+├── css/blog-post.css      # Extra styles for blog posts
+├── sections/              # HTML sections, in page order
+│   ├── header.html        # Name, bio, links, photo
 │   ├── research.html
+│   ├── publications.html
 │   ├── experience.html
-│   ├── education.html
 │   ├── projects.html
+│   ├── education.html
+│   ├── awards.html
 │   ├── blog.html
-│   ├── contact.html
 │   └── footer.html
+├── blog/                  # Blog posts
 ├── build.js               # Assembles sections into index.html
 ├── index.html             # Generated output
 └── package.json
@@ -25,7 +25,7 @@ Personal portfolio website of **Nguyen Khanh Huyen** — AI Researcher, Economis
 
 ## Development
 
-Edit files in `css/`, `js/`, or `sections/`, then rebuild:
+Edit files in `css/` or `sections/`, then rebuild:
 
 ```bash
 npm run build

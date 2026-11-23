@@ -4,39 +4,20 @@ const path = require('path');
 const sectionsDir = path.join(__dirname, 'sections');
 
 const sectionOrder = [
-    'nav',
-    'hero',
-    'about',
+    'header',
     'research',
-    'experience',
-    'education',
     'publications',
-    'awards',
+    'experience',
     'projects',
+    'education',
+    'awards',
     'blog',
-    'contact',
     'footer',
 ];
 
-// Read each section file
-const sectionContents = sectionOrder.map(name => {
-    const filePath = path.join(sectionsDir, `${name}.html`);
-    const content = fs.readFileSync(filePath, 'utf-8');
-    return content.trim();
-});
-
-// Join sections with dividers (except around nav, hero, and footer)
-const sectionsWithDividers = [];
-for (let i = 0; i < sectionContents.length; i++) {
-    sectionsWithDividers.push(sectionContents[i]);
-    // Add divider between sections (not after nav, not after last, not before footer)
-    if (i > 0 && i < sectionContents.length - 2) {
-        sectionsWithDividers.push('        <div class="section-divider"></div>');
-    }
-}
-
-const bodyContent = sectionsWithDividers
-    .map(s => s.split('\n').map(line => '        ' + line).join('\n'))
+const bodyContent = sectionOrder
+    .map(name => fs.readFileSync(path.join(sectionsDir, `${name}.html`), 'utf-8').trim())
+    .map(s => s.split('\n').map(line => (line ? '        ' + line : line)).join('\n'))
     .join('\n\n');
 
 const html = `<!DOCTYPE html>
@@ -44,28 +25,20 @@ const html = `<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyen Khanh Huyen — AI Researcher & Economist</title>
-    <meta name="description" content="Portfolio of Nguyen Khanh Huyen — AI Researcher, Economics Student, Math Enthusiast exploring the intersection of AI, economics, and mathematics.">
+    <title>Nguyen Khanh Huyen</title>
+    <meta name="author" content="Nguyen Khanh Huyen">
+    <meta name="description" content="Nguyen Khanh Huyen — AI researcher working on optimization dynamics, implicit-depth models, and safety-preserving LLM fine-tuning.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <!-- SPACEKIT 3D BACKGROUND -->
-    <div id="spacekit-container"></div>
-    <div class="nebula-layer"></div>
-
-    <!-- CONTENT -->
-    <div class="content-layer">
+    <main class="site">
 
 ${bodyContent}
 
-    </div>
-
-    <script src="https://typpo.github.io/spacekit/build/spacekit.js"></script>
-    <script src="js/main.js"></script>
+    </main>
 </body>
 </html>
 `;
