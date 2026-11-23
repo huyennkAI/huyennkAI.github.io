@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
-  <rect width="160" height="160" rx="10" fill="#edf5fd"/>
-  <path d="M80 88 m-56 0 a56 50 0 1 0 112 0 a44 40 0 1 0 -88 0 a34 30 0 1 0 68 0 a24 22 0 1 0 -48 0 a16 14 0 1 0 32 0 a8 7 0 1 0 -16 0" fill="none" stroke="#1772d0" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="80" cy="88" r="5" fill="#f09228"/>
-  <text x="16" y="26" font-family="Lato, Verdana, sans-serif" font-size="12" font-weight="700" fill="#0f3e75">z* = f(z*, x)</text>
-</svg>
