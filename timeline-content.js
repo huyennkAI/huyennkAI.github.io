@@ -33,7 +33,7 @@ document.getElementById("timeline-component").innerHTML = `
           <span class="timeline-marker" aria-hidden="true">●</span>
           <div>
             <strong>Joined QACI, FPT as Talent Researcher</strong>
-            <p>Quantum AI &amp; Cyber Security Institute · efficient multimodal AI and sensor fusion for wearables, robotics, and human–machine interaction · Hanoi · <a href="https://fpt.com/en" target="_blank" rel="noopener">FPT</a></p>
+            <p>Quantum AI &amp; Cyber Security Institute · efficient multimodal AI and sensor fusion for wearables, robotics, and human–machine interaction · advised by <a href="https://www.csc.liv.ac.uk/~anguyen/" target="_blank" rel="noopener">Associate Professor Anh Nguyen</a> · Hanoi · <a href="https://fpt.com/en" target="_blank" rel="noopener">FPT</a></p>
           </div>
         </li>
         <li class="timeline-item award" data-location="Ho Chi Minh City, Vietnam" data-logo="data/logos/ICPC.png">
