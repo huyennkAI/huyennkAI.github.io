@@ -14,7 +14,9 @@ which builds on [Jon Barron's template](https://github.com/jonbarron/jonbarron_w
 | `research-globe.html` | Globe view of the timeline (city coordinates) |
 | `site.js` | Timeline + filter behaviour (no edits needed) |
 | `stylesheet.css` | Site styles |
-| `images/` | Publication and project teasers (160×160) |
+| `images/` | Publication teasers |
+| `data/logos/` | Timeline logos |
+| `cv/cv.tex` | CV source; `cv/cv.pdf` is built from it by GitHub Actions |
 
 The two `*-content.js` files hold HTML inside a JavaScript template string:
 keep the opening and closing backticks, and do not use a backtick inside the HTML.
@@ -49,6 +51,12 @@ In `timeline-content.js`, copy one `<li class="timeline-item …">` block, newes
 - `data-logo` is optional: put an image in `data/logos/` to show it beside the entry.
 - `data-location` is optional and adds the entry to the globe. For a new city, add its
   name and coordinates to `locationDefinitions` in `research-globe.html`.
+
+## Update the CV
+
+Edit `cv/cv.tex` and push. The **Build CV** workflow (`.github/workflows/cv.yml`)
+compiles it, commits `cv/cv.pdf`, and asks GitHub Pages to rebuild. The sidebar
+"CV" link opens that PDF. It can also be run by hand from the repo's Actions tab.
 
 ## Preview
 

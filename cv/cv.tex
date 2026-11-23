@@ -1,0 +1,272 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{accent}{HTML}{1F4E79}
+\definecolor{rulegray}{HTML}{B5B5B5}
+\definecolor{subtle}{HTML}{555555}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent
+}
+
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\textwidth}{1.4in}
+\addtolength{\topmargin}{-0.85in}
+\addtolength{\textheight}{1.7in}
+
+\raggedbottom
+\raggedright
+\setlength{\parindent}{0pt}
+
+\titleformat{\section}
+  {\normalsize\bfseries\color{accent}}
+  {}{0em}{}
+  [\color{rulegray}\titlerule]
+
+\titlespacing*{\section}{0pt}{8pt}{3pt}
+
+\setlist[itemize]{
+  leftmargin=1.2em,
+  topsep=2pt,
+  itemsep=3pt,
+  parsep=0pt
+}
+
+% Heading and list spacing
+\newcommand{\cvHeading}[4]{%
+  \begin{tabular*}{\textwidth}
+    {l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \color{subtle}#2 \\
+    \textit{#3} & \textit{\color{subtle}#4} \\
+  \end{tabular*}%
+  \par\vspace{0pt}%
+}
+
+\newenvironment{experienceItems}
+  {\begin{itemize}[
+    leftmargin=1.2em,
+    topsep=0pt,
+    partopsep=0pt,
+    itemsep=3pt,
+    parsep=0pt
+  ]}
+  {\end{itemize}\vspace{7pt}}
+
+\begin{document}
+
+% HEADER
+\begin{center}
+  {\LARGE\bfseries\color{accent}
+  NGUYEN KHANH HUYEN}\\[4pt]
+  (+84) 917-875-483 \quad | \quad
+  Hanoi, Vietnam \quad | \quad
+  \href{mailto:khhuyen1601@gmail.com}
+  {khhuyen1601@gmail.com}\\[2pt]
+  \href{https://huyennkai.github.io/}
+  {huyennkai.github.io}
+  \quad | \quad
+  ORCID:
+  \href{https://orcid.org/0009-0009-3270-1104}
+  {0009-0009-3270-1104}
+\end{center}
+
+% EDUCATION
+\section{EDUCATION}
+
+\cvHeading
+{Foreign Trade University (FTU)}
+{Hanoi, Vietnam}
+{B.Sc. International Business Economics
+(Early Graduation, Top 1\%)}
+{2022 -- 2026 \quad GPA: 3.68/4.0}
+
+\begin{itemize}
+  \item \textbf{Relevant coursework:}
+  Probability Theory (10.0),
+  Advanced Mathematics (9.2),
+  Programming for Data Analysis (9.6).
+\end{itemize}
+% HONORS AND AWARDS
+\section{HONORS AND AWARDS}
+
+\begin{itemize}
+
+  \item \textbf{ICPC Asia Regional Contest:}
+  Second Prize, Non-IT Division (2025).
+
+  \item \textbf{Vietnam National Mathematics
+  Olympiad for University Students:}
+  Second Prize (2023); Third Prize (2025).
+
+  \item \textbf{Vietnam National Informatics
+  Olympiad \& National AI Olympiad:}
+  Consolation Prizes (2025).
+
+  \item \textbf{Economic Research Champion:}
+  Second Prize in National
+  Quantitative-Economics Research
+  Competition (2024).
+
+  \item \textbf{FTU Outstanding Student:}
+  Top 30 across cohorts (2023);
+  \textbf{Outstanding Graduate:}
+  Top 1\%, Early Graduation (2026).
+
+\end{itemize}
+
+% RESEARCH & PROFESSIONAL EXPERIENCE
+\section{RESEARCH \& PROFESSIONAL EXPERIENCE}
+
+\cvHeading
+{Quantum AI \& Cyber Security Institute (QACI), FPT}
+{Jul 2026 -- Present}
+{Talent Researcher}
+{Hanoi, Vietnam}
+
+\begin{experienceItems}
+
+  \item Research efficient multimodal AI
+  and sensor-fusion methods combining
+  vision, physiological signals, and
+  motion sensing for wearable devices,
+  robotics, and human--machine interaction.
+
+  \item Develop lightweight learning
+  architectures and real-time AI systems,
+  with emphasis on anatomical priors,
+  multimodal representations, and
+  human-centered physical AI applications.
+
+\end{experienceItems}
+
+\cvHeading
+{Venera AI --- \href{https://venerian.space}
+{venerian.space}}
+{Nov 2025 -- Present}
+{Machine Learning Engineer (Remote)}
+{Vietnam}
+
+\begin{experienceItems}
+
+  \item Designed a two-stage
+  \textbf{CPT $\rightarrow$ SFT}
+  adaptation pipeline for Qwen3-4B
+  using Unsloth 4-bit, LoRA, and
+  DeepSpeed ZeRO-2/3, achieving
+  \textbf{55.24\%} domain benchmark
+  accuracy versus 53.33\% baseline.
+
+  \item Built a FastAPI/vLLM inference
+  pipeline, reducing serving latency
+  by approximately \textbf{40\%}
+  while maintaining instruction-format
+  reliability under domain adaptation.
+
+\end{experienceItems}
+
+\cvHeading
+{Sphoton Technology --- \href{https://sphoton.com/}
+{sphoton.com}}
+{Aug 2025 -- Dec 2025}
+{AI Engineer}
+{Hanoi, Vietnam}
+
+\begin{experienceItems}
+
+  \item Developed a reinforcement
+  learning-based portfolio allocation
+  agent across 28 financial assets,
+  using historical prices, technical
+  indicators, and rolling correlations;
+  achieved the highest Sharpe ratio
+  among evaluated baselines.
+
+\end{experienceItems}
+
+
+% PUBLICATIONS
+\section{PUBLICATIONS}
+
+\begin{itemize}
+
+\item Phung Duy Quang,
+\textbf{Nguyen Khanh Huyen}, et al.\\[2pt]
+\textbf{A Comparative Analysis of the Asymmetric
+Impact of Innovation and Economic Growth in
+Vietnam: A Linear and Nonlinear ARDL Approach.}
+\textit{Journal of Artificial Intelligence and
+Data Analytics} (Wissen Publication Group), 2026.
+\href{https://doi.org/10.67927/JAIDataAnalytics/2026(1)113}
+{[DOI]}.\\[2pt]
+Applied linear and nonlinear ARDL models to show
+that innovation affects Vietnam's GDP growth
+asymmetrically: gains in the Global Innovation
+Index promote growth, while declines have no
+significant effect.
+
+\vspace{4pt}
+
+\item Phung Duy Quang,
+\textbf{Nguyen Khanh Huyen}, et al.\\[2pt]
+\textbf{Analysis and Forecasting of Bitcoin
+Price Volatility: A Deep Learning Approach
+Using DNN, LSTM, Transformers, and the
+ARMA--GARCH Model.}
+\textit{Journal of Applied Mathematics}
+(Wiley, Scopus), 2025.
+\href{https://doi.org/10.1155/jama/9089827}
+{[DOI]}.\\[2pt]
+Compared deep learning models with
+ARMA--GARCH for cryptocurrency volatility
+forecasting using over 20,000 hourly observations.
+
+\vspace{4pt}
+
+\item Phung Duy Quang,
+\textbf{Nguyen Khanh Huyen}, et al.\\[2pt]
+\textbf{The Role of Trade Openness and
+Macroeconomic Factors in Shaping FDI
+Inflows to Vietnam.}
+\textit{Southeast Asia Development Research},
+2025.
+\href{https://doi.org/10.63385/sadr.v1i1.244}
+{[DOI]}.\\[2pt]
+Applied vector autoregression to examine
+relationships between trade openness,
+macroeconomic indicators, and FDI inflows.
+\end{itemize}
+
+% RESEARCH INTERESTS & TECHNICAL SKILLS
+\section{RESEARCH INTERESTS \& TECHNICAL SKILLS}
+
+\begin{itemize}
+
+  \item \textbf{Research Interests:}
+  Multimodal Learning, Human--Robot Interaction,
+  Wearable AI, Biosignal Processing, Sensor Fusion,
+  Efficient AI, Physical AI.
+
+  \item \textbf{Technical Expertise:}
+  Computer Vision, Deep Learning,
+  State-Space Models, Reinforcement Learning,
+  Model Fine-tuning, Real-time Inference.
+
+  \item \textbf{Programming \& Tools:}
+  Python, C/C++, SQL, PyTorch, HuggingFace,
+  DeepSpeed, vLLM, Docker, Git, FastAPI, \LaTeX.
+
+  \item \textbf{Languages:}
+  Vietnamese (Native), English (IELTS 7.0).
+
+\end{itemize}
+
+\end{document}

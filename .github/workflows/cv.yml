@@ -1,0 +1,51 @@
+name: Build CV
+
+# Compile cv/cv.tex to cv/cv.pdf whenever the LaTeX source changes,
+# commit the PDF, then ask GitHub Pages to rebuild so the new PDF is served.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'cv/cv.tex'
+      - '.github/workflows/cv.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: build-cv
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv.tex
+          working_directory: cv
+
+      - name: Commit PDF
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cv/cv.pdf
+          if git diff --cached --quiet; then
+            echo "cv.pdf unchanged"
+          else
+            git commit -m "Build CV PDF"
+            git push
+          fi
+
+      - name: Request Pages rebuild
+        # Pushes made with GITHUB_TOKEN may not trigger a Pages build on their own.
+        run: |
+          curl -sS -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/pages/builds" || true
