@@ -1,4 +1,33 @@
-/* Blog post page — loaded after style.css, reuses its tokens */
+/* Blog post page — loaded after ../stylesheet.css */
+:root {
+    --blue: #1772d0;
+    --navy: #1b2733;
+    --muted: #666;
+    --line: #e5e7e9;
+    --pale: #edf5fd;
+}
+
+.site {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.blog-post-body,
+.blog-post-body p,
+.blog-post-body li,
+.blog-post-body a,
+.blog-post-body strong {
+    font-size: 15px;
+}
+
+.blog-post-body h2 {
+    color: var(--navy);
+    font-size: 20px;
+}
+
 .post-nav {
     padding: 8px 0 0;
     font-size: 14px;
@@ -29,7 +58,7 @@
     line-height: 1.75;
 }
 
-.blog-post-body h2 { margin-top: 32px; }
+.blog-post-body h2 { margin: 32px 0 12px; }
 
 .blog-post-body hr {
     border: 0;

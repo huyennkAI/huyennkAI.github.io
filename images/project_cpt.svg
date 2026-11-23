@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <rect width="160" height="160" rx="10" fill="#edf5fd"/>
+  <g font-family="Lato, Verdana, sans-serif" font-size="12" font-weight="700" text-anchor="middle">
+    <rect x="22" y="34" width="116" height="26" rx="6" fill="#ffffff" stroke="#9dbfe6" stroke-width="2"/>
+    <text x="80" y="51" fill="#0f3e75">Qwen3-4B</text>
+    <rect x="22" y="74" width="116" height="26" rx="6" fill="#1772d0"/>
+    <text x="80" y="91" fill="#ffffff">CPT · LoRA</text>
+    <rect x="22" y="114" width="116" height="26" rx="6" fill="#0f3e75"/>
+    <text x="80" y="131" fill="#ffffff">SFT</text>
+  </g>
+  <g stroke="#f09228" stroke-width="2.5" fill="none" stroke-linecap="round"><path d="M80 61 V72"/><path d="M80 101 V112"/></g>
+</svg>

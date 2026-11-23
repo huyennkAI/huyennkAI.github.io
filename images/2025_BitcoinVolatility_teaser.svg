@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <rect width="160" height="160" rx="10" fill="#edf5fd"/>
+  <g stroke="#d0dff0" stroke-width="1"><line x1="16" y1="40" x2="148" y2="40"/><line x1="16" y1="80" x2="148" y2="80"/><line x1="16" y1="120" x2="148" y2="120"/></g>
+  <path d="M16 96 L28 90 L36 100 L46 70 L54 84 L62 58 L70 76 L78 50 L86 88 L94 64 L102 98 L110 72 L118 60 L126 92 L134 66 L144 78" fill="none" stroke="#9dbfe6" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M16 90 C40 84 56 66 78 64 S118 74 144 72" fill="none" stroke="#1772d0" stroke-width="3" stroke-linecap="round"/>
+  <path d="M16 140 L40 138 L52 128 L64 134 L78 118 L90 132 L102 122 L116 136 L130 126 L144 132" fill="none" stroke="#f09228" stroke-width="2" stroke-linejoin="round"/>
+  <text x="16" y="26" font-family="Lato, Verdana, sans-serif" font-size="12" font-weight="700" fill="#0f3e75">BTC volatility</text>
+</svg>
