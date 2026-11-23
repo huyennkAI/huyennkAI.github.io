@@ -906,3 +906,135 @@ body {
 .projects-section {
   min-height: 0;
 }
+
+/* ==========================================================
+   Two-column layout: fixed sidebar (photo + links), scrolling content
+   ========================================================== */
+.page-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1120px;
+  flex: 1 0 auto;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  flex: 0 0 260px;
+  box-sizing: border-box;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: 48px 0 32px;
+}
+
+.sidebar-photo {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border: 4px solid #edf5fd;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sidebar-name {
+  margin: 22px 0 4px;
+  color: #1b2733;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.sidebar-role {
+  margin: 0;
+  color: #555;
+  font-size: 13px;
+}
+
+.sidebar-divider {
+  margin: 20px 0 12px;
+  border: 0;
+  border-top: 2px solid #e5e7e9;
+}
+
+.sidebar-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  color: #25282b;
+  font-size: 15px;
+}
+
+.sidebar-links a:hover,
+.sidebar-links a:focus {
+  color: #1772d0;
+}
+
+.sidebar-links svg {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+  fill: #1772d0;
+}
+
+.content {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 800px;
+  padding: 36px 0 0;
+}
+
+.bio {
+  padding: 0 20px 8px;
+}
+
+.bio p {
+  line-height: 1.6;
+}
+
+@media (max-width: 860px) {
+  .page-layout {
+    display: block;
+    padding: 0 16px;
+  }
+
+  .sidebar {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    padding: 28px 0 8px;
+    text-align: center;
+  }
+
+  .sidebar-photo {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+  }
+
+  .sidebar-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 20px;
+  }
+
+  .content {
+    padding-top: 8px;
+  }
+
+  .bio {
+    padding: 0 4px 8px;
+  }
+}
