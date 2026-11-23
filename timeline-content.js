@@ -44,7 +44,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>Non-IT Division, 2025–2026 season</p>
           </div>
         </li>
-        <li class="timeline-item award">
+        <li class="timeline-item award" data-logo="data/logos/VAIP.png">
           <time datetime="2025-12">2025</time>
           <span class="timeline-marker" aria-hidden="true">★</span>
           <div>
@@ -52,7 +52,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>After Third Prize in the Northern Region round</p>
           </div>
         </li>
-        <li class="timeline-item award">
+        <li class="timeline-item award" data-logo="data/logos/VAIP.png">
           <time datetime="2025-12">2025</time>
           <span class="timeline-marker" aria-hidden="true">★</span>
           <div>
@@ -76,7 +76,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>with <a href="https://minhtcai.github.io" target="_blank" rel="noopener">Minh Tran</a> · <a href="https://ftulabs.github.io/" target="_blank" rel="noopener">FTU Labs</a></p>
           </div>
         </li>
-        <li class="timeline-item career">
+        <li class="timeline-item career" data-logo="data/logos/sPhoton.png">
           <time datetime="2025-08">Aug. 2025</time>
           <span class="timeline-marker" aria-hidden="true">●</span>
           <div>
@@ -170,14 +170,6 @@ document.getElementById("timeline-component").innerHTML = `
           <div>
             <strong>Started B.A. at Foreign Trade University</strong>
             <p>International Business Economics · Hanoi · <a href="https://english.ftu.edu.vn" target="_blank" rel="noopener">FTU</a></p>
-          </div>
-        </li>
-        <li class="timeline-item award">
-          <time datetime="2018">2018–22</time>
-          <span class="timeline-marker" aria-hidden="true">★</span>
-          <div>
-            <strong>Provincial Mathematics Olympiad: First, Third &amp; Second Prize</strong>
-            <p>2018–19, 2020–21, 2021–22 · member of the National Olympiad Training Team in Mathematics</p>
           </div>
         </li>
       </ol>
