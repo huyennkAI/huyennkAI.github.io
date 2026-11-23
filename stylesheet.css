@@ -1076,13 +1076,13 @@ body {
 .content a:focus { color: #c76a00; }
 .content .timeline-item time { color: #4f5b66; }
 
-/* ---- walking ducks on the left and right edges (duck.js) ---- */
+
+
+/* ---- duck families walking up and down the left and right edges (duck.js) ---- */
 .duck {
   position: fixed;
   top: 0;
   z-index: 5;
-  width: 44px;
-  height: 44px;
   pointer-events: none;
   will-change: transform;
 }
@@ -1102,6 +1102,10 @@ body {
 .duck-beak { fill: #f08a24; }
 .duck-eye { fill: #1b2733; }
 
+/* ducklings: paler and fluffier */
+.duckling .duck-body { fill: #ffe98a; }
+.duckling .duck-wing { fill: #ffd84d; }
+
 .duck-leg path {
   fill: none;
   stroke: #f08a24;
@@ -1118,6 +1122,11 @@ body {
 
 .duck-leg-a { transform-origin: 27px 49px; animation: duck-step 0.45s ease-in-out infinite alternate; }
 .duck-leg-b { transform-origin: 35px 49px; animation: duck-step 0.45s ease-in-out infinite alternate-reverse; }
+
+/* ducklings take quicker little steps */
+.duckling .duck-waddle,
+.duckling .duck-leg-a,
+.duckling .duck-leg-b { animation-duration: 0.3s; }
 
 .duck.is-resting .duck-waddle,
 .duck.is-resting .duck-leg-a,

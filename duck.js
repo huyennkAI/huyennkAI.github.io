@@ -1,4 +1,5 @@
-// Two ducks that waddle up and down the left and right edges of the page.
+// A mother duck and two ducklings waddling up and down each edge of the page.
+// The ducklings follow the mother's trail with a delay, so they turn and stop where she did.
 (function () {
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
@@ -13,43 +14,58 @@
       '<path class="duck-wing" d="M19 36 C23 30 33 31 35 38 C31 43 23 43 19 36 Z"/>' +
     '</svg>';
 
-  // side: 'left' | 'right'. Each wall rotates the duck so its feet face the wall.
-  function makeDuck(side, startFraction, speed) {
+  var MOTHER = 58;            // px
+  var BABY = 30;              // px
+  var LAGS = [1.4, 2.2];      // seconds each duckling trails behind the mother
+  var TRAIL_KEEP = 3;         // seconds of trail history to keep
+
+  function makeDuck(side, size, extraClass) {
     var el = document.createElement('div');
-    el.className = 'duck duck-' + side;
+    el.className = 'duck duck-' + side + (extraClass ? ' ' + extraClass : '');
+    el.style.width = el.style.height = size + 'px';
     el.innerHTML = '<div class="duck-waddle">' + DUCK_SVG + '</div>';
     document.body.appendChild(el);
+    return el;
+  }
+
+  function makeFamily(side, startFraction, speed) {
+    var babies = LAGS.map(function () { return makeDuck(side, BABY, 'duckling'); });
+    var mother = makeDuck(side, MOTHER, 'duck-mother');
     return {
-      el: el,
       side: side,
-      y: 0,
+      mother: mother,
+      babies: babies,
+      y: 0,                       // mother's center, px from top
       startFraction: startFraction,
       dir: side === 'left' ? 1 : -1,   // 1 = down, -1 = up
-      speed: speed,                    // px per second
-      pauseUntil: 0
+      speed: speed,
+      pauseUntil: 0,
+      trail: []                   // [{t, y}]
     };
   }
 
-  var ducks = [makeDuck('left', 0.25, 46), makeDuck('right', 0.7, 38)];
-  var margin = 60;
+  var families = [makeFamily('left', 0.3, 44), makeFamily('right', 0.7, 36)];
 
   function bounds() {
-    var h = window.innerHeight;
-    return { min: margin, max: Math.max(margin, h - margin - 44) };
+    var pad = 24 + MOTHER / 2;
+    return { min: pad, max: Math.max(pad, window.innerHeight - pad) };
   }
 
-  ducks.forEach(function (d) {
-    var b = bounds();
-    d.y = b.min + (b.max - b.min) * d.startFraction;
-  });
-
-  function render(d) {
+  // Place a duck whose center is at y, walking in direction dir (1 down, -1 up).
+  function place(el, side, size, y, dir, resting) {
     // Base SVG faces right. Left wall: rotate 90deg (head down). Right wall: rotate -90deg (head up).
-    var rot = d.side === 'left' ? 90 : -90;
-    var headDown = d.side === 'left' ? 1 : -1;
-    var flip = d.dir === headDown ? 1 : -1;
-    d.el.style.transform = 'translateY(' + d.y.toFixed(1) + 'px) rotate(' + rot + 'deg) scaleX(' + flip + ')';
-    d.el.classList.toggle('is-resting', performance.now() < d.pauseUntil);
+    var rot = side === 'left' ? 90 : -90;
+    var headDown = side === 'left' ? 1 : -1;
+    var flip = dir === headDown ? 1 : -1;
+    el.style.transform = 'translateY(' + (y - size / 2).toFixed(1) + 'px) rotate(' + rot + 'deg) scaleX(' + flip + ')';
+    el.classList.toggle('is-resting', resting);
+  }
+
+  function trailAt(trail, t) {
+    for (var i = trail.length - 1; i >= 0; i--) {
+      if (trail[i].t <= t) return i;
+    }
+    return 0;
   }
 
   var last = performance.now();
@@ -57,19 +73,42 @@
     var dt = Math.min(0.05, (now - last) / 1000);
     last = now;
     var b = bounds();
-    ducks.forEach(function (d) {
-      if (now >= d.pauseUntil) {
-        d.y += d.dir * d.speed * dt;
-        if (d.y >= b.max) { d.y = b.max; d.dir = -1; d.pauseUntil = now + 800 + Math.random() * 1200; }
-        if (d.y <= b.min) { d.y = b.min; d.dir = 1; d.pauseUntil = now + 800 + Math.random() * 1200; }
-        // occasional short rest mid-way
-        if (Math.random() < 0.002) d.pauseUntil = now + 600 + Math.random() * 900;
+
+    families.forEach(function (f) {
+      var moving = now >= f.pauseUntil;
+      if (moving) {
+        f.y += f.dir * f.speed * dt;
+        if (f.y >= b.max) { f.y = b.max; f.dir = -1; f.pauseUntil = now + 900 + Math.random() * 1300; }
+        if (f.y <= b.min) { f.y = b.min; f.dir = 1; f.pauseUntil = now + 900 + Math.random() * 1300; }
+        if (Math.random() < 0.002) f.pauseUntil = now + 700 + Math.random() * 1000;
       }
-      render(d);
+      f.trail.push({ t: now, y: f.y, dir: f.dir });
+      while (f.trail.length && f.trail[0].t < now - TRAIL_KEEP * 1000) f.trail.shift();
+
+      place(f.mother, f.side, MOTHER, f.y, f.dir, !moving);
+
+      f.babies.forEach(function (el, i) {
+        var idx = trailAt(f.trail, now - LAGS[i] * 1000);
+        var p = f.trail[idx];
+        var prev = f.trail[Math.max(0, idx - 3)];
+        var babyMoving = Math.abs(p.y - prev.y) > 0.01;
+        place(el, f.side, BABY, p.y, p.dir, !babyMoving);
+      });
     });
+
     requestAnimationFrame(tick);
   }
 
-  ducks.forEach(render);
+  // Seed each trail so ducklings start in line behind the mother.
+  families.forEach(function (f) {
+    var b = bounds();
+    f.y = b.min + (b.max - b.min) * f.startFraction;
+    var now = performance.now();
+    for (var s = TRAIL_KEEP; s >= 0; s -= 0.05) {
+      var y = Math.min(b.max, Math.max(b.min, f.y - f.dir * f.speed * s));
+      f.trail.push({ t: now - s * 1000, y: y, dir: f.dir });
+    }
+  });
+
   requestAnimationFrame(tick);
 })();
