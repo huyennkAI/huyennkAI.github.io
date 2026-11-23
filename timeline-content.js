@@ -20,7 +20,7 @@ document.getElementById("timeline-component").innerHTML = `
       </div>
 
       <ol class="timeline-list">
-        <li class="timeline-item event">
+        <li class="timeline-item event" data-logo="data/logos/Wissen_Publication_Group.png">
           <time datetime="2026-10">Oct. 2026</time>
           <span class="timeline-marker" aria-hidden="true">◆</span>
           <div>
@@ -28,15 +28,15 @@ document.getElementById("timeline-component").innerHTML = `
             <p>“A Comparative Analysis of the Asymmetric Impact of Innovation and Economic Growth in Vietnam...” · <a href="https://doi.org/10.67927/JAIDataAnalytics/2026(1)113" target="_blank" rel="noopener">Paper</a></p>
           </div>
         </li>
-        <li class="timeline-item career" data-location="Hanoi, Vietnam">
+        <li class="timeline-item career" data-location="Hanoi, Vietnam" data-logo="data/logos/FPT.svg">
           <time datetime="2026-07">Jul. 2026</time>
           <span class="timeline-marker" aria-hidden="true">●</span>
           <div>
             <strong>Joined QACI, FPT as Talent Researcher</strong>
-            <p>Quantum AI &amp; Cyber Security Institute · efficient multimodal AI and sensor fusion for wearables, robotics, and human–machine interaction · Hanoi</p>
+            <p>Quantum AI &amp; Cyber Security Institute · efficient multimodal AI and sensor fusion for wearables, robotics, and human–machine interaction · Hanoi · <a href="https://fpt.com/en" target="_blank" rel="noopener">FPT</a></p>
           </div>
         </li>
-        <li class="timeline-item award" data-location="Ho Chi Minh City, Vietnam">
+        <li class="timeline-item award" data-location="Ho Chi Minh City, Vietnam" data-logo="data/logos/ICPC.png">
           <time datetime="2025-12">2025</time>
           <span class="timeline-marker" aria-hidden="true">★</span>
           <div>
@@ -60,7 +60,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>Non-IT track, after two months of learning C++</p>
           </div>
         </li>
-        <li class="timeline-item career">
+        <li class="timeline-item career" data-logo="data/logos/Venera_AI.png">
           <time datetime="2025-11">Nov. 2025</time>
           <span class="timeline-marker" aria-hidden="true">●</span>
           <div>
@@ -68,7 +68,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>Parameter-efficient adaptation of LLMs for Vietnamese Traditional Medicine · <a href="https://venerian.space/en" target="_blank" rel="noopener">Venera AI</a></p>
           </div>
         </li>
-        <li class="timeline-item career">
+        <li class="timeline-item career" data-logo="data/logos/FTU.png">
           <time datetime="2025-08-2">Aug. 2025</time>
           <span class="timeline-marker" aria-hidden="true">●</span>
           <div>
@@ -84,7 +84,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>Sequential decision-making for portfolio allocation, until Dec. 2025 · <a href="https://sphoton.com/" target="_blank" rel="noopener">Sphoton</a></p>
           </div>
         </li>
-        <li class="timeline-item career" data-location="Hanoi, Vietnam">
+        <li class="timeline-item career" data-location="Hanoi, Vietnam" data-logo="data/logos/FTU.png">
           <time datetime="2025-01">Jan. 2025</time>
           <span class="timeline-marker" aria-hidden="true">●</span>
           <div>
@@ -92,7 +92,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>Foreign Trade University · under <a href="https://scholar.google.com/citations?user=knSbt0oAAAAJ&hl=en" target="_blank" rel="noopener">Dr. Phung Duy Quang</a></p>
           </div>
         </li>
-        <li class="timeline-item event">
+        <li class="timeline-item event" data-logo="data/logos/Wiley.png">
           <time datetime="2025">2025</time>
           <span class="timeline-marker" aria-hidden="true">◆</span>
           <div>
@@ -100,7 +100,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>“Analysis and Forecasting of Bitcoin Price Volatility...” · Wiley · <a href="https://doi.org/10.1155/jama/9089827" target="_blank" rel="noopener">Paper</a></p>
           </div>
         </li>
-        <li class="timeline-item event">
+        <li class="timeline-item event" data-logo="data/logos/NIEP.png">
           <time datetime="2025">2025</time>
           <span class="timeline-marker" aria-hidden="true">◆</span>
           <div>
@@ -108,7 +108,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>“The Role of Trade Openness and Macroeconomic Factors...” · <a href="https://doi.org/10.63385/sadr.v1i1.244" target="_blank" rel="noopener">Paper</a></p>
           </div>
         </li>
-        <li class="timeline-item award">
+        <li class="timeline-item award" data-logo="data/logos/Vietnam_Mathematical_Society.png">
           <time datetime="2025">2024–25</time>
           <span class="timeline-marker" aria-hidden="true">★</span>
           <div>
@@ -116,7 +116,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>Division A</p>
           </div>
         </li>
-        <li class="timeline-item award" data-location="Hanoi, Vietnam">
+        <li class="timeline-item award" data-location="Hanoi, Vietnam" data-logo="data/logos/FTU.png">
           <time datetime="2025">2024–26</time>
           <span class="timeline-marker" aria-hidden="true">★</span>
           <div>
@@ -124,7 +124,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>Foreign Trade University · 2024–25 and 2025–26</p>
           </div>
         </li>
-        <li class="timeline-item award">
+        <li class="timeline-item award" data-logo="data/logos/NEU.png">
           <time datetime="2024">2024–25</time>
           <span class="timeline-marker" aria-hidden="true">★</span>
           <div>
@@ -132,7 +132,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>Organized by NEU Club</p>
           </div>
         </li>
-        <li class="timeline-item award" data-location="Hanoi, Vietnam">
+        <li class="timeline-item award" data-location="Hanoi, Vietnam" data-logo="data/logos/FTU.png">
           <time datetime="2023-2">2023–24</time>
           <span class="timeline-marker" aria-hidden="true">★</span>
           <div>
@@ -140,7 +140,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>Foreign Trade University · International Business Economics Institute</p>
           </div>
         </li>
-        <li class="timeline-item award">
+        <li class="timeline-item award" data-logo="data/logos/Academy_of_Finance.png">
           <time datetime="2023-1">2023–24</time>
           <span class="timeline-marker" aria-hidden="true">★</span>
           <div>
@@ -148,7 +148,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>Organized by Academy of Finance Club</p>
           </div>
         </li>
-        <li class="timeline-item award">
+        <li class="timeline-item award" data-logo="data/logos/Vietnam_Mathematical_Society.png">
           <time datetime="2023">2022–23</time>
           <span class="timeline-marker" aria-hidden="true">★</span>
           <div>
@@ -156,7 +156,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>Division A</p>
           </div>
         </li>
-        <li class="timeline-item award" data-location="Hanoi, Vietnam">
+        <li class="timeline-item award" data-location="Hanoi, Vietnam" data-logo="data/logos/FTU.png">
           <time datetime="2022-2">2022–23</time>
           <span class="timeline-marker" aria-hidden="true">★</span>
           <div>
@@ -164,7 +164,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>Foreign Trade University · also a Certificate of Excellence for national olympiad results</p>
           </div>
         </li>
-        <li class="timeline-item career" data-location="Hanoi, Vietnam">
+        <li class="timeline-item career" data-location="Hanoi, Vietnam" data-logo="data/logos/FTU.png">
           <time datetime="2022-1">2022</time>
           <span class="timeline-marker" aria-hidden="true">●</span>
           <div>
