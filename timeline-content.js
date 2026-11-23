@@ -69,11 +69,27 @@ document.getElementById("timeline-component").innerHTML = `
           </div>
         </li>
         <li class="timeline-item career">
+          <time datetime="2025-08-2">Aug. 2025</time>
+          <span class="timeline-marker" aria-hidden="true">●</span>
+          <div>
+            <strong>Research Assistant to Minh Tran</strong>
+            <p>Carnegie Mellon University · <a href="https://minhtcai.github.io" target="_blank" rel="noopener">Minh Tran</a></p>
+          </div>
+        </li>
+        <li class="timeline-item career">
           <time datetime="2025-08">Aug. 2025</time>
           <span class="timeline-marker" aria-hidden="true">●</span>
           <div>
             <strong>AI Engineer at Sphoton Technology</strong>
             <p>Sequential decision-making for portfolio allocation, until Dec. 2025 · <a href="https://sphoton.com/" target="_blank" rel="noopener">Sphoton</a></p>
+          </div>
+        </li>
+        <li class="timeline-item career" data-location="Hanoi, Vietnam">
+          <time datetime="2025-01">Jan. 2025</time>
+          <span class="timeline-marker" aria-hidden="true">●</span>
+          <div>
+            <strong>Research Assistant at FTU Labs</strong>
+            <p>Faculty of Technology and Data Science, Foreign Trade University · under <a href="https://scholar.google.com/citations?user=knSbt0oAAAAJ&hl=en" target="_blank" rel="noopener">Dr. Phung Duy Quang</a> · <a href="https://ftulabs.github.io/" target="_blank" rel="noopener">FTU Labs</a></p>
           </div>
         </li>
         <li class="timeline-item event">
