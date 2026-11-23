@@ -1040,8 +1040,8 @@ body {
   box-sizing: border-box;
   padding-left: 12px;
   padding-right: 12px;
-  background: #d6eaf8;
-  box-shadow: 0 0 0 100vmax #d6eaf8;
+  background: #e8f4fc;
+  box-shadow: 0 0 0 100vmax #e8f4fc;
   clip-path: inset(0 -100vmax 0 0);
 }
 
@@ -1054,9 +1054,9 @@ body {
   }
 }
 
-/* ---- two-tone background: left #78B4E3, right #D6EAF8 ---- */
+/* ---- two-tone background: left #BDE7FA, right #E8F4FC ---- */
 body {
-  background: #78b4e3;
+  background: #bde7fa;
 }
 
 .sidebar-photo { border-color: #ffffff; }
@@ -1066,9 +1066,9 @@ body {
 .sidebar-links a { color: #0f2a4a; }
 .sidebar-links svg { fill: #0f2a4a; }
 .sidebar-links a:hover,
-.sidebar-links a:focus { color: #ffffff; }
+.sidebar-links a:focus { color: #135ea8; }
 .sidebar-links a:hover svg,
-.sidebar-links a:focus svg { fill: #ffffff; }
+.sidebar-links a:focus svg { fill: #135ea8; }
 
 /* keep links and small grey text readable on the light-blue column */
 .content a { color: #135ea8; }
