@@ -46,7 +46,8 @@ document.getElementById("publications-component").innerHTML = `
     <a href="https://doi.org/10.67927/JAIDataAnalytics/2026(1)113">doi: 10.67927/JAIDataAnalytics/2026(1)113</a>
     <p></p>
     <p style="margin-bottom: 0;">
-      Using ARDL and NARDL models, we study how the Global Innovation Index and CPI affect Vietnam's GDP growth. Innovation has a positive long-run effect, and the effect is asymmetric: increases in innovation promote growth while decreases have no significant effect. Vol. 1, No. 3 · Wissen Publication Group.
+      Innovation drives Vietnam's growth asymmetrically: gains in the Global Innovation Index lift GDP, while declines leave it largely unaffected.<br>
+      Vol. 1, No. 3 · Wissen Publication Group
     </p>
   </td>
 </tr>
@@ -72,7 +73,8 @@ document.getElementById("publications-component").innerHTML = `
     <a href="https://doi.org/10.1155/jama/9089827">doi: 10.1155/jama/9089827</a>
     <p></p>
     <p style="margin-bottom: 0;">
-      We compare deep learning models (DNN, LSTM, Transformers) with the classical ARMA‑GARCH model for analyzing and forecasting Bitcoin price volatility. Wiley · ESCI + Scopus Q3.
+      A head-to-head benchmark of DNN, LSTM, and Transformer models against classical ARMA‑GARCH for forecasting Bitcoin volatility.<br>
+      Vol. 2025, No. 1, ID 9089827 · Wiley · ESCI + Scopus Q3
     </p>
   </td>
 </tr>
@@ -98,7 +100,8 @@ document.getElementById("publications-component").innerHTML = `
     <a href="https://doi.org/10.63385/sadr.v1i1.244">doi: 10.63385/sadr.v1i1.244</a>
     <p></p>
     <p style="margin-bottom: 0;">
-      We study how trade openness and macroeconomic factors shape foreign direct investment inflows to Vietnam. Vol. 1, No. 1, pp. 56–68 · NIEP · ACI-indexed.
+      Pinpoints how trade openness and macroeconomic conditions shape foreign direct investment flowing into Vietnam.<br>
+      Vol. 1, No. 1, pp. 56–68 · NIEP · ACI-indexed
     </p>
   </td>
 </tr>
