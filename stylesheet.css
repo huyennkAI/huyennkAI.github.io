@@ -1075,3 +1075,66 @@ body {
 .content a:hover,
 .content a:focus { color: #c76a00; }
 .content .timeline-item time { color: #4f5b66; }
+
+/* ---- walking ducks on the left and right edges (duck.js) ---- */
+.duck {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.duck-left { left: 2px; }
+.duck-right { right: 2px; }
+
+.duck svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.duck-body { fill: #ffd43b; }
+.duck-wing { fill: #f2b705; }
+.duck-beak { fill: #f08a24; }
+.duck-eye { fill: #1b2733; }
+
+.duck-leg path {
+  fill: none;
+  stroke: #f08a24;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.duck-waddle {
+  width: 100%;
+  height: 100%;
+  animation: duck-waddle 0.45s ease-in-out infinite alternate;
+}
+
+.duck-leg-a { transform-origin: 27px 49px; animation: duck-step 0.45s ease-in-out infinite alternate; }
+.duck-leg-b { transform-origin: 35px 49px; animation: duck-step 0.45s ease-in-out infinite alternate-reverse; }
+
+.duck.is-resting .duck-waddle,
+.duck.is-resting .duck-leg-a,
+.duck.is-resting .duck-leg-b {
+  animation-play-state: paused;
+}
+
+@keyframes duck-waddle {
+  from { transform: rotate(-6deg); }
+  to { transform: rotate(6deg); }
+}
+
+@keyframes duck-step {
+  from { transform: rotate(-18deg); }
+  to { transform: rotate(18deg); }
+}
+
+@media (max-width: 860px), (prefers-reduced-motion: reduce) {
+  .duck { display: none; }
+}
