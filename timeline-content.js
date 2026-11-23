@@ -72,8 +72,8 @@ document.getElementById("timeline-component").innerHTML = `
           <time datetime="2025-08-2">Aug. 2025</time>
           <span class="timeline-marker" aria-hidden="true">●</span>
           <div>
-            <strong>Research Assistant to Minh Tran</strong>
-            <p>Carnegie Mellon University · <a href="https://minhtcai.github.io" target="_blank" rel="noopener">Minh Tran</a></p>
+            <strong>Research Assistant at FTU Labs</strong>
+            <p>with <a href="https://minhtcai.github.io" target="_blank" rel="noopener">Minh Tran</a> · <a href="https://ftulabs.github.io/" target="_blank" rel="noopener">FTU Labs</a></p>
           </div>
         </li>
         <li class="timeline-item career">
@@ -88,8 +88,8 @@ document.getElementById("timeline-component").innerHTML = `
           <time datetime="2025-01">Jan. 2025</time>
           <span class="timeline-marker" aria-hidden="true">●</span>
           <div>
-            <strong>Research Assistant at FTU Labs</strong>
-            <p>Faculty of Technology and Data Science, Foreign Trade University · under <a href="https://scholar.google.com/citations?user=knSbt0oAAAAJ&hl=en" target="_blank" rel="noopener">Dr. Phung Duy Quang</a> · <a href="https://ftulabs.github.io/" target="_blank" rel="noopener">FTU Labs</a></p>
+            <strong>Research Assistant, Faculty of Technology and Data Science</strong>
+            <p>Foreign Trade University · under <a href="https://scholar.google.com/citations?user=knSbt0oAAAAJ&hl=en" target="_blank" rel="noopener">Dr. Phung Duy Quang</a></p>
           </div>
         </li>
         <li class="timeline-item event">
@@ -169,7 +169,7 @@ document.getElementById("timeline-component").innerHTML = `
           <span class="timeline-marker" aria-hidden="true">●</span>
           <div>
             <strong>Started B.A. at Foreign Trade University</strong>
-            <p>International Business Economics · Hanoi · <a href="https://ftu.edu.vn/" target="_blank" rel="noopener">FTU</a></p>
+            <p>International Business Economics · Hanoi · <a href="https://english.ftu.edu.vn" target="_blank" rel="noopener">FTU</a></p>
           </div>
         </li>
         <li class="timeline-item award">

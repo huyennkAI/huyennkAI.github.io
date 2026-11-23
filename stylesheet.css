@@ -1040,8 +1040,8 @@ body {
   box-sizing: border-box;
   padding-left: 12px;
   padding-right: 12px;
-  background: #f2f7fd;
-  box-shadow: 0 0 0 100vmax #f2f7fd;
+  background: #d6eaf8;
+  box-shadow: 0 0 0 100vmax #d6eaf8;
   clip-path: inset(0 -100vmax 0 0);
 }
 
@@ -1053,3 +1053,25 @@ body {
     clip-path: inset(0 -100vmax -100vmax -100vmax);
   }
 }
+
+/* ---- two-tone background: left #78B4E3, right #D6EAF8 ---- */
+body {
+  background: #78b4e3;
+}
+
+.sidebar-photo { border-color: #ffffff; }
+.sidebar-name { color: #0f2a4a; }
+.sidebar-role { color: #17324f; }
+.sidebar-divider { border-top-color: rgba(255, 255, 255, 0.7); }
+.sidebar-links a { color: #0f2a4a; }
+.sidebar-links svg { fill: #0f2a4a; }
+.sidebar-links a:hover,
+.sidebar-links a:focus { color: #ffffff; }
+.sidebar-links a:hover svg,
+.sidebar-links a:focus svg { fill: #ffffff; }
+
+/* keep links and small grey text readable on the light-blue column */
+.content a { color: #135ea8; }
+.content a:hover,
+.content a:focus { color: #c76a00; }
+.content .timeline-item time { color: #4f5b66; }
