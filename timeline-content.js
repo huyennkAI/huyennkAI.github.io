@@ -28,6 +28,14 @@ document.getElementById("timeline-component").innerHTML = `
             <p>“A Comparative Analysis of the Asymmetric Impact of Innovation and Economic Growth in Vietnam...” · <a href="https://doi.org/10.67927/JAIDataAnalytics/2026(1)113" target="_blank" rel="noopener">Paper</a></p>
           </div>
         </li>
+        <li class="timeline-item career" data-location="Hanoi, Vietnam">
+          <time datetime="2026-07">Jul. 2026</time>
+          <span class="timeline-marker" aria-hidden="true">●</span>
+          <div>
+            <strong>Joined QACI, FPT as Talent Researcher</strong>
+            <p>Quantum AI &amp; Cyber Security Institute · efficient multimodal AI and sensor fusion for wearables, robotics, and human–machine interaction · Hanoi</p>
+          </div>
+        </li>
         <li class="timeline-item award" data-location="Ho Chi Minh City, Vietnam">
           <time datetime="2025-12">2025</time>
           <span class="timeline-marker" aria-hidden="true">★</span>
