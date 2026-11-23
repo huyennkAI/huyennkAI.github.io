@@ -41,7 +41,7 @@ document.getElementById("timeline-component").innerHTML = `
           <span class="timeline-marker" aria-hidden="true">★</span>
           <div>
             <strong>Consolation Prize, Vietnam National Collegiate AI Olympiad</strong>
-            <p>After Third Prize in the Northern Region round · <a href="blog/risky-but-worth-it-2025.html">Blog post</a></p>
+            <p>After Third Prize in the Northern Region round</p>
           </div>
         </li>
         <li class="timeline-item award">

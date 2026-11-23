@@ -8,14 +8,13 @@ which builds on [Jon Barron's template](https://github.com/jonbarron/jonbarron_w
 
 | File | What it holds |
 |------|---------------|
-| `index.html` | Bio, links, photo, projects, blog list, footer |
+| `index.html` | Sidebar (photo, links), bio, footer |
 | `timeline-content.js` | News & timeline entries |
 | `publications-content.js` | Publications (with year / topic / venue filters) |
 | `research-globe.html` | Globe view of the timeline (city coordinates) |
 | `site.js` | Timeline + filter behaviour (no edits needed) |
 | `stylesheet.css` | Site styles |
 | `images/` | Publication and project teasers (160×160) |
-| `blog/` | Blog posts (styled by `css/blog-post.css`) |
 
 The two `*-content.js` files hold HTML inside a JavaScript template string:
 keep the opening and closing backticks, and do not use a backtick inside the HTML.
