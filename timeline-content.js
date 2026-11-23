@@ -73,7 +73,7 @@ document.getElementById("timeline-component").innerHTML = `
           <span class="timeline-marker" aria-hidden="true">●</span>
           <div>
             <strong>Research Assistant at FTU Labs</strong>
-            <p>with <a href="https://minhtcai.github.io" target="_blank" rel="noopener">Minh Tran</a> · <a href="https://ftulabs.github.io/" target="_blank" rel="noopener">FTU Labs</a></p>
+            <p>with <a href="https://minhtcai.github.io" target="_blank" rel="noopener">MSc. Minh Tran</a> · <a href="https://ftulabs.github.io/" target="_blank" rel="noopener">FTU Labs</a></p>
           </div>
         </li>
         <li class="timeline-item career" data-logo="data/logos/sPhoton.png">
