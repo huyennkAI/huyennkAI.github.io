@@ -25,12 +25,38 @@ document.getElementById("publications-component").innerHTML = `
        </td>
      </tr>
 
+<!-- Innovation and growth in Vietnam, 2026 -->
+<tr class="publication-row" data-tags="Econometrics;Development Economics">
+  <td class="paper-media-cell">
+    <a href="https://doi.org/10.67927/JAIDataAnalytics/2026(1)113">
+      <div class="paper-media">
+        <img src="images/pub3.png" alt="Akaike Information Criteria across ARDL model specifications">
+      </div>
+    </a>
+  </td>
+  <td class="paper-info-cell">
+    <papertitle>A Comparative Analysis of the Asymmetric Impact of Innovation and Economic Growth in Vietnam: A Linear and Nonlinear ARDL Approach</papertitle>
+    <br>
+    Phung Duy Quang, <strong>Nguyen Khanh Huyen</strong>, Hoang Nam Quyen, Nguyen Huu Thinh, Pham Thi Phuong Thao, Nguyen Hai Dang, Lưu Thị Vân Anh, Tran Quang Thanh, Nguyen Viet Ha
+    <br>
+    <em>Journal of Artificial Intelligence and Data Analytics</em>, 2026
+    <br>
+    <a href="https://wissenpublicationgroup.com/journals/index.php/jaidataanalytics/article/view/107/55">paper</a>
+    /
+    <a href="https://doi.org/10.67927/JAIDataAnalytics/2026(1)113">doi: 10.67927/JAIDataAnalytics/2026(1)113</a>
+    <p></p>
+    <p style="margin-bottom: 0;">
+      Using ARDL and NARDL models, we study how the Global Innovation Index and CPI affect Vietnam's GDP growth. Innovation has a positive long-run effect, and the effect is asymmetric: increases in innovation promote growth while decreases have no significant effect. Vol. 1, No. 3 · Wissen Publication Group.
+    </p>
+  </td>
+</tr>
+
 <!-- Bitcoin volatility, 2025 -->
 <tr class="publication-row" data-tags="Deep Learning;Time Series;Finance">
   <td class="paper-media-cell">
     <a href="https://doi.org/10.1155/jama/9089827">
       <div class="paper-media">
-        <img src="images/2025_BitcoinVolatility_teaser.svg" alt="Bitcoin volatility forecasting teaser">
+        <img src="images/pub1.png" alt="Predicted vs. true scaled close price for RNN and Transformer models">
       </div>
     </a>
   </td>
@@ -56,7 +82,7 @@ document.getElementById("publications-component").innerHTML = `
   <td class="paper-media-cell">
     <a href="https://doi.org/10.63385/sadr.v1i1.244">
       <div class="paper-media">
-        <img src="images/2025_FDIVietnam_teaser.svg" alt="FDI inflows to Vietnam teaser">
+        <img src="images/pub2.png" alt="Inverse roots of the AR characteristic polynomial inside the unit circle">
       </div>
     </a>
   </td>

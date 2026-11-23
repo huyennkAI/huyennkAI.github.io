@@ -1,6 +1,6 @@
 document.getElementById("timeline-component").innerHTML = `
 <section class="timeline-section" aria-label="News and timeline">
-  <details class="timeline-details">
+  <details class="timeline-details" open>
     <summary>
       <span class="timeline-summary-title">News &amp; timeline</span>
       <span class="timeline-summary-latest"></span>
@@ -20,6 +20,14 @@ document.getElementById("timeline-component").innerHTML = `
       </div>
 
       <ol class="timeline-list">
+        <li class="timeline-item event">
+          <time datetime="2026-10">Oct. 2026</time>
+          <span class="timeline-marker" aria-hidden="true">◆</span>
+          <div>
+            <strong>Paper published in Journal of Artificial Intelligence and Data Analytics</strong>
+            <p>“A Comparative Analysis of the Asymmetric Impact of Innovation and Economic Growth in Vietnam...” · <a href="https://doi.org/10.67927/JAIDataAnalytics/2026(1)113" target="_blank" rel="noopener">Paper</a></p>
+          </div>
+        </li>
         <li class="timeline-item award" data-location="Ho Chi Minh City, Vietnam">
           <time datetime="2025-12">2025</time>
           <span class="timeline-marker" aria-hidden="true">★</span>
