@@ -148,7 +148,7 @@ document.getElementById("timeline-component").innerHTML = `
             <p>Organized by Academy of Finance Club</p>
           </div>
         </li>
-        <li class="timeline-item award" data-logo="data/logos/Vietnam_Mathematical_Society.png">
+        <li class="timeline-item award" data-logo="data/logos/Vietnam_Mathematical_Society.png" data-location="Hue, Vietnam">
           <time datetime="2023">2022–23</time>
           <span class="timeline-marker" aria-hidden="true">★</span>
           <div>
@@ -176,7 +176,7 @@ document.getElementById("timeline-component").innerHTML = `
 
       <div class="timeline-globe-view" hidden>
         <p class="timeline-globe-intro">A geographic view of my research journey.</p>
-        <iframe class="timeline-globe-frame" data-src="research-globe.html?embed=1" title="Interactive research journey globe"></iframe>
+        <iframe class="timeline-globe-frame" data-src="research-globe.html?embed=1&v=16" title="Interactive research journey globe"></iframe>
       </div>
 
       <dialog class="timeline-logo-dialog" id="timeline-logo-dialog" aria-labelledby="timeline-logo-title" aria-describedby="timeline-logo-date">
