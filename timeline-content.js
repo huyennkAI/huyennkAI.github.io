@@ -20,6 +20,14 @@ document.getElementById("timeline-component").innerHTML = `
       </div>
 
       <ol class="timeline-list">
+        <li class="timeline-item event">
+          <time datetime="2026-11">Nov. 2026</time>
+          <span class="timeline-marker" aria-hidden="true">◆</span>
+          <div>
+            <strong>Paper published in Discover Artificial Intelligence</strong>
+            <p>“Likelihood Based Deep Learning for Volatility Forecasting Using Vietnam Stock Market Data” · Springer Nature · <a href="https://doi.org/10.1007/s44163-026-02837-1" target="_blank" rel="noopener">Paper</a></p>
+          </div>
+        </li>
         <li class="timeline-item event" data-logo="data/logos/Wissen_Publication_Group.png">
           <time datetime="2026-10">Oct. 2026</time>
           <span class="timeline-marker" aria-hidden="true">◆</span>

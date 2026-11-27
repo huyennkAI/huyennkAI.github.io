@@ -25,6 +25,33 @@ document.getElementById("publications-component").innerHTML = `
        </td>
      </tr>
 
+<!-- Likelihood-based volatility forecasting, VN-Index, 2026 -->
+<tr class="publication-row" data-tags="Deep Learning;Time Series;Finance">
+  <td class="paper-media-cell">
+    <a href="https://doi.org/10.1007/s44163-026-02837-1">
+      <div class="paper-media">
+        <img src="images/pub4.svg" alt="VN-Index data fed to ARMA-GARCH, DNN and LSTM models trained with MSE or likelihood loss">
+      </div>
+    </a>
+  </td>
+  <td class="paper-info-cell">
+    <papertitle>Likelihood Based Deep Learning for Volatility Forecasting Using Vietnam Stock Market Data</papertitle>
+    <br>
+    Phung Duy Quang, <strong>Nguyen Khanh Huyen</strong>, Hoang Nam Quyen, Nguyen Thi Linh Dan, Bui Duc Duong, Nguyen Hai Minh, Bui Dang Nam
+    <br>
+    <em>Discover Artificial Intelligence</em>, 2026
+    <br>
+    <a href="https://link.springer.com/article/10.1007/s44163-026-02837-1">paper</a>
+    /
+    <a href="https://doi.org/10.1007/s44163-026-02837-1">doi: 10.1007/s44163-026-02837-1</a>
+    <p></p>
+    <p style="margin-bottom: 0;">
+      Evaluates likelihood-based vs. MSE training for DNN and LSTM volatility models on 25 years of VN-Index data, benchmarked against ARMA‑GARCH.<br>
+      Vol. 6, Article 1983 · Springer Nature
+    </p>
+  </td>
+</tr>
+
 <!-- Innovation and growth in Vietnam, 2026 -->
 <tr class="publication-row" data-tags="Econometrics;Development Economics">
   <td class="paper-media-cell">

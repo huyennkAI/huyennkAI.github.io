@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" font-family="Helvetica, Arial, sans-serif">
+  <rect width="640" height="480" fill="#ffffff"/>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- data -->
+  <rect x="40" y="200" width="150" height="80" rx="10" fill="#e8f0fb" stroke="#3b6fb6" stroke-width="2"/>
+  <text x="115" y="234" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f3f6e">VN-Index</text>
+  <text x="115" y="260" text-anchor="middle" font-size="15" fill="#1f3f6e">2000–2024 · 5932 days</text>
+  <!-- models -->
+  <g font-size="19" font-weight="bold" text-anchor="middle">
+    <rect x="250" y="80" width="150" height="64" rx="10" fill="#f3f3f3" stroke="#777" stroke-width="2"/>
+    <text x="325" y="118" fill="#333">ARMA–GARCH</text>
+    <rect x="250" y="208" width="150" height="64" rx="10" fill="#fff3e3" stroke="#d88a1c" stroke-width="2"/>
+    <text x="325" y="246" fill="#8a520a">DNN</text>
+    <rect x="250" y="336" width="150" height="64" rx="10" fill="#fff3e3" stroke="#d88a1c" stroke-width="2"/>
+    <text x="325" y="374" fill="#8a520a">LSTM</text>
+  </g>
+  <g stroke="#555" stroke-width="2" fill="none" marker-end="url(#a)">
+    <path d="M190,225 C220,200 220,112 248,112"/>
+    <path d="M190,240 L248,240"/>
+    <path d="M190,255 C220,280 220,368 248,368"/>
+  </g>
+  <!-- objectives -->
+  <g font-size="16" text-anchor="middle">
+    <rect x="460" y="190" width="150" height="44" rx="8" fill="#ffffff" stroke="#888" stroke-width="2"/>
+    <text x="535" y="218" fill="#333">MSE loss</text>
+    <rect x="460" y="246" width="150" height="44" rx="8" fill="#eaf6ec" stroke="#3a9a4f" stroke-width="2"/>
+    <text x="535" y="274" fill="#22663a" font-weight="bold">Likelihood loss</text>
+  </g>
+  <g stroke="#555" stroke-width="2" fill="none" marker-end="url(#a)">
+    <path d="M400,240 L458,240"/>
+    <path d="M400,368 C430,368 430,268 458,268"/>
+  </g>
+  <text x="320" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">Volatility forecasting</text>
+</svg>
